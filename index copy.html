@@ -696,59 +696,38 @@
 
     .hero-welcome-bg {
       position: absolute;
-      top: 18%;
+      top: 20%;
       left: 0;
       right: 0;
       text-align: center;
       font-family: var(--font-display);
-      font-size: clamp(4rem, 18vw, 15rem);
-      font-weight: 800;
-      color: transparent;
-      -webkit-text-stroke: 1px rgba(201, 168, 76, 0.08);
-      letter-spacing: 0.4em;
+      font-size: clamp(3rem, 15vw, 12rem);
+      font-weight: 700;
+      color: rgba(255, 255, 255, 0.02);
+      letter-spacing: clamp(0.2em, 5vw, 0.5em);
       text-transform: uppercase;
       pointer-events: none;
       z-index: 1;
-      animation: heroTextReveal 2.5s cubic-bezier(0.19, 1, 0.22, 1) both;
-      white-space: nowrap;
-    }
-
-    @keyframes heroTextReveal {
-      0% {
-        letter-spacing: -0.2em;
-        opacity: 0;
-        transform: translateY(20px);
-      }
-
-      100% {
-        letter-spacing: 0.4em;
-        opacity: 1;
-        transform: translateY(0);
-      }
+      animation: tracking-in-expand 2s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
     }
 
     @media (max-width: 480px) {
       .hero-welcome-bg {
-        display: block;
-        font-size: clamp(3rem, 15vw, 6rem);
-        top: 22%;
-        -webkit-text-stroke: 0.5px rgba(201, 168, 76, 0.1);
-        opacity: 0.4;
+        display: none;
       }
     }
+      0% {
+        letter-spacing: -0.5em;
+        opacity: 0;
+      }
 
-    0% {
-      letter-spacing: -0.5em;
-      opacity: 0;
-    }
+      40% {
+        opacity: 0.6;
+      }
 
-    40% {
-      opacity: 0.6;
-    }
-
-    100% {
-      opacity: 1;
-    }
+      100% {
+        opacity: 1;
+      }
     }
 
     /* =============================================
@@ -1601,111 +1580,84 @@
       color: var(--text-primary);
     }
 
-    .partnership-card {
-      background: linear-gradient(135deg, var(--surface2) 0%, var(--midnight) 100%);
-      border: 1px solid var(--glass-border);
-      border-radius: var(--radius-xl);
-      padding: clamp(32px, 5vw, 64px);
-      position: relative;
-      overflow: hidden;
-      display: flex;
-      flex-direction: column;
-      gap: 32px;
-      box-shadow: var(--shadow-card);
-    }
-
-    .partnership-card::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: radial-gradient(circle at top right, rgba(201, 168, 76, 0.05) 0%, transparent 60%);
-      pointer-events: none;
-    }
-
-    .partnership-visual {
-      width: 100%;
-      height: 240px;
-      border-radius: var(--radius-lg);
-      background: url('C:/Users/G R Silver/.gemini/antigravity/brain/2404a4db-1044-4b01-961e-a22648dc144f/partnership_visual_1777021230343.png') center/cover;
-      position: relative;
-      overflow: hidden;
-      border: 1px solid var(--glass-border);
-    }
-
-    .partnership-visual::after {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(0deg, var(--midnight) 0%, transparent 100%);
-    }
-
-    .partnership-ctas {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 16px;
-    }
-
-    .p-cta-item {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 20px 24px;
+    .contact-form {
       background: var(--glass);
       border: 1px solid var(--glass-border);
-      border-radius: var(--radius-md);
-      transition: var(--transition);
-      text-decoration: none;
+      border-radius: var(--radius-xl);
+      padding: 48px;
     }
 
-    .p-cta-item:hover {
-      background: rgba(201, 168, 76, 0.08);
-      border-color: var(--gold);
-      transform: translateY(-2px);
+    .form-title {
+      font-family: var(--font-display);
+      font-size: 1.6rem;
+      font-weight: 600;
+      color: var(--text-primary);
+      margin-bottom: 32px;
     }
 
-    .p-cta-info {
-      display: flex;
-      align-items: center;
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
       gap: 16px;
     }
 
-    .p-cta-icon {
-      font-size: 1.5rem;
-      width: 44px;
-      height: 44px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: rgba(201, 168, 76, 0.1);
-      border-radius: 50%;
-      color: var(--gold);
+    .form-group {
+      margin-bottom: 20px;
     }
 
-    .p-cta-text h4 {
-      font-size: 0.95rem;
+    .form-group label {
+      display: block;
+      font-size: 0.72rem;
       font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 8px;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid var(--glass-border);
+      border-radius: var(--radius-sm);
+      padding: 14px 18px;
+      font-family: var(--font-body);
+      font-size: 0.875rem;
+      color: var(--text-primary);
+      outline: none;
+      transition: var(--transition);
+      appearance: none;
+    }
+
+    .form-group input::placeholder,
+    .form-group textarea::placeholder {
+      color: rgba(138, 143, 168, 0.5);
+    }
+
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      border-color: rgba(201, 168, 76, 0.5);
+      background: rgba(201, 168, 76, 0.04);
+    }
+
+    .form-group textarea {
+      height: 120px;
+      resize: vertical;
+    }
+
+    .form-group select option {
+      background: var(--surface2);
       color: var(--text-primary);
     }
 
-    .p-cta-text p {
-      font-size: 0.75rem;
-      color: var(--text-muted);
-    }
-
-    .p-cta-arrow {
-      color: var(--gold);
-      font-size: 1.2rem;
-      transition: transform 0.3s ease;
-    }
-
-    .p-cta-item:hover .p-cta-arrow {
-      transform: translateX(5px);
-    }
-
-    @media (min-width: 1024px) {
-      .partnership-ctas {
-        grid-template-columns: 1fr;
-      }
+    .form-submit {
+      width: 100%;
+      padding: 16px;
+      font-size: 0.875rem;
+      letter-spacing: 0.06em;
     }
 
     /* =============================================
@@ -2111,7 +2063,7 @@
         <p class="hero-eyebrow" data-aos="fade-up" data-aos-delay="100">Ananya Lifestyle India Private Limited</p>
 
         <h1 class="hero-title" data-aos="zoom-out" data-aos-duration="1200">
-          Shaping <span class="gold-word">Lifestyle,</span><br />
+          Crafting <span class="gold-word">Lifestyle,</span><br />
           <span class="italic-word">Technology</span><br />
           &amp; Legacy
         </h1>
@@ -2553,52 +2505,51 @@
           </div>
         </div>
 
-        <!-- Partnership Display -->
-        <div data-aos="fade-left" data-aos-duration="1000">
-          <div class="partnership-card">
-            <div class="partnership-visual"></div>
-            <div>
-              <h3 class="form-title" style="margin-bottom: 12px;">Let's Build the Future</h3>
-              <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.6;">
-                We are always open to strategic partnerships, global investments, and visionary collaborations. Reach
-                out directly to our executive team.
-              </p>
-            </div>
-
-            <div class="partnership-ctas">
-              <a href="mailto:ceo@ananyalifestyle.com" class="p-cta-item">
-                <div class="p-cta-info">
-                  <div class="p-cta-icon">✉️</div>
-                  <div class="p-cta-text">
-                    <h4>Executive Inquiry</h4>
-                    <p>ceo@ananyalifestyle.com</p>
-                  </div>
+        <!-- Form -->
+        <div data-aos="fade-left" data-aos-duration="800" data-aos-delay="100">
+          <div class="contact-form">
+            <h3 class="form-title">Initiate a Partnership Inquiry</h3>
+            <form onsubmit="handleFormSubmit(event)">
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="fname">First Name</label>
+                  <input type="text" id="fname" name="fname" placeholder="Your first name" required />
                 </div>
-                <div class="p-cta-arrow">→</div>
-              </a>
-
-              <a href="https://wa.me/919876543210" target="_blank" class="p-cta-item">
-                <div class="p-cta-info">
-                  <div class="p-cta-icon">💬</div>
-                  <div class="p-cta-text">
-                    <h4>Direct WhatsApp</h4>
-                    <p>Instant Business Chat</p>
-                  </div>
+                <div class="form-group">
+                  <label for="lname">Last Name</label>
+                  <input type="text" id="lname" name="lname" placeholder="Your last name" />
                 </div>
-                <div class="p-cta-arrow">→</div>
-              </a>
-
-              <!-- <a href="#" class="p-cta-item">
-                <div class="p-cta-info">
-                  <div class="p-cta-icon">🤝</div>
-                  <div class="p-cta-text">
-                    <h4>Schedule a Meeting</h4>
-                    <p>Book a Virtual Consultation</p>
-                  </div>
-                </div>
-                <div class="p-cta-arrow">→</div>
-              </a> -->
-            </div>
+              </div>
+              <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" placeholder="your@email.com" required />
+              </div>
+              <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" placeholder="+91 XXXXX XXXXX" />
+              </div>
+              <div class="form-group">
+                <label for="interest">Area of Interest</label>
+                <select id="interest" name="interest">
+                  <option value="">Select a business vertical...</option>
+                  <option value="jewelry">💎 Jewelry Manufacturing (GR Silver Designs)</option>
+                  <option value="astrology">🔮 Astrology Consulting (RashiYog)</option>
+                  <option value="it">💻 IT Services</option>
+                  <option value="b2b">🤝 B2B / B2C Services</option>
+                  <option value="ayurveda">🌿 Ayurveda (Upcoming)</option>
+                  <option value="partnership">🌐 Partnership / Investment</option>
+                  <option value="general">📋 General Inquiry</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="message">Your Message</label>
+                <textarea id="message" name="message"
+                  placeholder="Tell us about your inquiry, project, or how we can help you..."></textarea>
+              </div>
+              <button type="submit" class="btn btn-gold form-submit">
+                Send Message ✦
+              </button>
+            </form>
           </div>
         </div>
 
