@@ -66,12 +66,17 @@
       font-size: 16px;
     }
 
+    html,
     body {
       background: var(--midnight);
       color: var(--text-primary);
       font-family: var(--font-body);
       line-height: 1.7;
       overflow-x: hidden;
+      width: 100%;
+      position: relative;
+      overflow-wrap: break-word;
+      word-wrap: break-word;
     }
 
     img {
@@ -683,6 +688,12 @@
       opacity: 0.5;
     }
 
+    @media (max-width: 480px) {
+      .hero-overlay-text {
+        display: none;
+      }
+    }
+
     .hero-welcome-bg {
       position: absolute;
       top: 20%;
@@ -700,7 +711,11 @@
       animation: tracking-in-expand 2s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
     }
 
-    @keyframes tracking-in-expand {
+    @media (max-width: 480px) {
+      .hero-welcome-bg {
+        display: none;
+      }
+    }
       0% {
         letter-spacing: -0.5em;
         opacity: 0;
@@ -1350,7 +1365,7 @@
 
     .vision-item {
       display: flex;
-      gap: 24px;
+      gap: clamp(12px, 4vw, 24px);
       position: relative;
     }
 
@@ -1928,8 +1943,9 @@
       }
 
       .hero-title {
-        font-size: clamp(2.2rem, 15vw, 3.2rem);
-        line-height: 1.1;
+        font-size: clamp(2rem, 12vw, 2.8rem);
+        line-height: 1.2;
+        letter-spacing: -0.02em;
       }
 
       .hero-badge {
@@ -1954,8 +1970,8 @@
       .btn {
         width: 100%;
         justify-content: center;
-        padding: 14px 24px;
-        font-size: 0.85rem;
+        padding: 16px 24px;
+        font-size: 0.9rem;
       }
 
       .hero-ctas-secondary {
@@ -2619,7 +2635,7 @@
       duration: 700,
       easing: 'ease-out-quad',
       once: true,
-      offset: 60,
+      offset: window.innerWidth < 768 ? 20 : 60,
     });
 
     /* =============================================
