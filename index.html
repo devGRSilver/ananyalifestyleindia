@@ -48,9 +48,9 @@
       --font-body: 'Poppins', sans-serif;
 
       /* Fluid Spacing & Typography Tokens */
-      --section-padding: clamp(60px, 10vw, 120px);
+      --section-padding: clamp(60px, 12vw, 120px);
       --container-max: 1400px;
-      --gutter: clamp(16px, 4vw, 32px);
+      --gutter: clamp(16px, 5vw, 32px);
     }
 
     *,
@@ -256,7 +256,7 @@
     }
 
     .nav-brand-sub {
-      font-size: 0.6rem;
+      font-size: clamp(0.55rem, 2vw, 0.6rem);
       letter-spacing: 0.18em;
       color: var(--text-muted);
       text-transform: uppercase;
@@ -299,6 +299,12 @@
     .nav-cta {
       padding: 10px 24px;
       font-size: 0.8rem;
+    }
+
+    @media (max-width: 480px) {
+      .nav-cta {
+        display: none;
+      }
     }
 
     .hamburger {
@@ -454,11 +460,11 @@
 
     .hero-title {
       font-family: var(--font-display);
-      font-size: clamp(2.8rem, 12vw, 8.5rem);
+      font-size: clamp(2.6rem, 12vw, 8.5rem);
       font-weight: 700;
-      line-height: 0.9;
+      line-height: 1;
       color: var(--white);
-      margin-bottom: clamp(24px, 5vw, 40px);
+      margin-bottom: clamp(20px, 5vw, 40px);
       letter-spacing: -0.04em;
       text-wrap: balance;
       text-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
@@ -665,7 +671,7 @@
       top: 50%;
       transform: translate(-50%, -50%);
       font-family: var(--font-display);
-      font-size: clamp(8rem, 40vw, 30rem);
+      font-size: clamp(4rem, 40vw, 30rem);
       font-weight: 900;
       color: rgba(201, 168, 76, 0.03);
       white-space: nowrap;
@@ -674,6 +680,7 @@
       user-select: none;
       pointer-events: none;
       text-transform: uppercase;
+      opacity: 0.5;
     }
 
     .hero-welcome-bg {
@@ -683,10 +690,10 @@
       right: 0;
       text-align: center;
       font-family: var(--font-display);
-      font-size: clamp(5rem, 15vw, 12rem);
+      font-size: clamp(3rem, 15vw, 12rem);
       font-weight: 700;
       color: rgba(255, 255, 255, 0.02);
-      letter-spacing: 0.5em;
+      letter-spacing: clamp(0.2em, 5vw, 0.5em);
       text-transform: uppercase;
       pointer-events: none;
       z-index: 1;
@@ -730,7 +737,7 @@
 
     .about-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 380px), 1fr));
       gap: clamp(40px, 8vw, 80px);
       align-items: center;
     }
@@ -862,7 +869,7 @@
 
     .services-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
       gap: 24px;
     }
 
@@ -1018,11 +1025,11 @@
 
     .owner-bg-text {
       position: absolute;
-      left: -40px;
+      left: -20px;
       top: 50%;
       transform: translateY(-50%);
       font-family: var(--font-display);
-      font-size: 12rem;
+      font-size: clamp(6rem, 20vw, 12rem);
       font-weight: 700;
       color: rgba(201, 168, 76, 0.03);
       white-space: nowrap;
@@ -1237,7 +1244,7 @@
 
     .stats-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr));
       gap: 2px;
       background: var(--glass-border);
       border: 1px solid var(--glass-border);
@@ -1316,8 +1323,8 @@
 
     .vision-grid {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 80px;
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 480px), 1fr));
+      gap: clamp(40px, 8vw, 80px);
       align-items: center;
     }
 
@@ -1474,7 +1481,7 @@
 
     .contact-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr));
       gap: clamp(40px, 8vw, 80px);
       align-items: start;
     }
@@ -1639,11 +1646,11 @@
       gap: 48px;
       margin-bottom: 48px;
     }
-    
-    .footer-grid > div:first-child {
+
+    .footer-grid>div:first-child {
       grid-column: span 1;
     }
-    
+
     @media (min-width: 1025px) {
       .footer-grid {
         grid-template-columns: 2fr 1fr 1fr 1fr;
@@ -1749,7 +1756,7 @@
     ============================================= */
     @media (max-width: 1024px) {
       .services-grid {
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
       }
 
       .owner-grid {
@@ -1760,7 +1767,7 @@
       }
 
       .stats-grid {
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr));
       }
 
       .footer-grid {
@@ -1773,6 +1780,7 @@
         right: auto;
         bottom: auto;
         flex-direction: row;
+        flex-wrap: wrap;
         justify-content: center;
         width: 100%;
         margin-top: 40px;
@@ -1782,6 +1790,8 @@
       .hero-stat-card {
         padding: 12px 16px;
         text-align: center;
+        flex: 1 1 150px;
+        max-width: 200px;
       }
 
       .hero-stat-num {
@@ -1828,7 +1838,7 @@
 
       .vision-grid {
         grid-template-columns: 1fr;
-        gap: 48px;
+        gap: 40px;
       }
 
       .contact-grid {
@@ -1843,7 +1853,7 @@
       }
 
       .contact-form {
-        padding: 32px 24px;
+        padding: clamp(24px, 5vw, 48px) clamp(16px, 4vw, 32px);
       }
 
       .footer-grid {
@@ -1853,12 +1863,13 @@
 
       .footer-bottom {
         flex-direction: column;
-        gap: 12px;
+        gap: 16px;
         text-align: center;
       }
 
       .hero-ctas {
         gap: 12px;
+        width: 100%;
       }
 
       .about-pillars {
@@ -1874,16 +1885,18 @@
       #owner,
       #vision,
       #contact {
-        padding: 80px 0;
+        padding: clamp(60px, 12vw, 80px) 0;
       }
 
       #stats {
-        padding: 64px 0;
+        padding: clamp(48px, 10vw, 64px) 0;
       }
     }
 
     @media (max-width: 480px) {
-      .about-grid, .contact-grid {
+
+      .about-grid,
+      .contact-grid {
         grid-template-columns: 1fr;
       }
 
@@ -1896,23 +1909,34 @@
       }
 
       .hero-title {
-        font-size: clamp(2.4rem, 15vw, 3.5rem);
+        font-size: clamp(2.2rem, 15vw, 3.2rem);
+        line-height: 1.1;
       }
 
       .hero-badge {
         font-size: 0.65rem;
         padding: 6px 14px;
+        text-align: center;
       }
 
       .btn {
         width: 100%;
         justify-content: center;
         padding: 14px 24px;
+        font-size: 0.85rem;
       }
 
       .hero-ctas-secondary {
         flex-direction: column;
         width: 100%;
+      }
+
+      .section-title {
+        font-size: 2.2rem;
+      }
+
+      .mobile-menu a {
+        font-size: 1.6rem;
       }
     }
 
@@ -1980,7 +2004,8 @@
     <div class="hero-welcome-bg">WELCOME</div>
     <div class="hero-overlay-text">ANANYA</div>
 
-    <div class="container" style="position:relative;z-index:2;padding-top:140px;padding-bottom:100px;">
+    <div class="container"
+      style="position:relative;z-index:2;padding-top:clamp(100px, 15vh, 140px);padding-bottom:clamp(60px, 10vh, 100px);">
       <div class="hero-content">
         <div class="hero-badge" data-aos="fade-down" data-aos-duration="800">
           <span class="hero-badge-dot"></span>
@@ -2020,22 +2045,6 @@
           </div>
           <span>Discover Our Universe</span>
         </div>
-      </div>
-    </div>
-
-    <!-- Floating stat cards (desktop) -->
-    <div class="hero-stats" aria-hidden="true">
-      <div class="hero-stat-card">
-        <div class="hero-stat-num">17<span class="stat-suffix">+</span></div>
-        <div class="hero-stat-label">Years Experience</div>
-      </div>
-      <div class="hero-stat-card">
-        <div class="hero-stat-num">5</div>
-        <div class="hero-stat-label">Business Verticals</div>
-      </div>
-      <div class="hero-stat-card">
-        <div class="hero-stat-num">Global</div>
-        <div class="hero-stat-label">Brand Reach</div>
       </div>
     </div>
   </section>
