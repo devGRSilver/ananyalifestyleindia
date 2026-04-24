@@ -1,15 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Ananya Lifestyle India Pvt. Ltd. – A diversified corporate conglomerate spanning Jewelry, Astrology, IT, B2B/B2C services, and Ayurveda, led by visionary entrepreneur Rahul Goyal." />
-  <meta name="keywords" content="Ananya Lifestyle, Rahul Goyal, GR Silver Designs, Rashiyog, Jewelry, Astrology, IT, Ayurveda, India" />
+  <meta name="description"
+    content="Ananya Lifestyle India Pvt. Ltd. – A diversified corporate conglomerate spanning Jewelry, Astrology, IT, B2B/B2C services, and Ayurveda, led by visionary entrepreneur Rahul Goyal." />
+  <meta name="keywords"
+    content="Ananya Lifestyle, Rahul Goyal, GR Silver Designs, Rashiyog, Jewelry, Astrology, IT, Ayurveda, India" />
   <title>Ananya Lifestyle India Pvt. Ltd. | Crafting Lifestyle, Technology & Legacy</title>
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet" />
 
   <!-- AOS Animation Library -->
   <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
@@ -19,33 +24,47 @@
        CSS CUSTOM PROPERTIES & RESET
     ============================================= */
     :root {
-      --gold:        #C9A84C;
-      --gold-light:  #E8C97A;
-      --gold-dark:   #9A7532;
-      --midnight:    #07090F;
-      --deep:        #0D1117;
-      --surface:     #131820;
-      --surface2:    #1A2030;
-      --glass:       rgba(255,255,255,0.04);
-      --glass-border:rgba(255,255,255,0.08);
-      --text-primary:#F0EDE8;
-      --text-muted:  #8A8FA8;
+      --gold: #C9A84C;
+      --gold-light: #E8C97A;
+      --gold-dark: #9A7532;
+      --midnight: #07090F;
+      --deep: #0D1117;
+      --surface: #131820;
+      --surface2: #1A2030;
+      --glass: rgba(255, 255, 255, 0.04);
+      --glass-border: rgba(255, 255, 255, 0.08);
+      --text-primary: #F0EDE8;
+      --text-muted: #8A8FA8;
       --text-accent: #C9A84C;
-      --white:       #FFFFFF;
-      --radius-sm:   8px;
-      --radius-md:   16px;
-      --radius-lg:   24px;
-      --radius-xl:   40px;
-      --shadow-gold: 0 0 40px rgba(201,168,76,0.15);
-      --shadow-card: 0 8px 48px rgba(0,0,0,0.5);
-      --transition:  0.4s cubic-bezier(0.25,0.46,0.45,0.94);
-      --font-display:'Cormorant Garamond', serif;
-      --font-body:   'Poppins', sans-serif;
+      --white: #FFFFFF;
+      --radius-sm: 8px;
+      --radius-md: 16px;
+      --radius-lg: 24px;
+      --radius-xl: 40px;
+      --shadow-gold: 0 0 40px rgba(201, 168, 76, 0.15);
+      --shadow-card: 0 8px 48px rgba(0, 0, 0, 0.5);
+      --transition: 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      --font-display: 'Cormorant Garamond', serif;
+      --font-body: 'Poppins', sans-serif;
+
+      /* Fluid Spacing & Typography Tokens */
+      --section-padding: clamp(60px, 10vw, 120px);
+      --container-max: 1400px;
+      --gutter: clamp(16px, 4vw, 32px);
     }
 
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-    html { scroll-behavior: smooth; font-size: 16px; }
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+    }
 
     body {
       background: var(--midnight);
@@ -55,21 +74,46 @@
       overflow-x: hidden;
     }
 
-    img { max-width: 100%; display: block; }
-    a { text-decoration: none; color: inherit; }
-    ul { list-style: none; }
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    ul {
+      list-style: none;
+    }
 
     /* =============================================
        SCROLLBAR
     ============================================= */
-    ::-webkit-scrollbar { width: 4px; }
-    ::-webkit-scrollbar-track { background: var(--deep); }
-    ::-webkit-scrollbar-thumb { background: var(--gold-dark); border-radius: 2px; }
+    ::-webkit-scrollbar {
+      width: 4px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: var(--deep);
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: var(--gold-dark);
+      border-radius: 2px;
+    }
 
     /* =============================================
        UTILITY CLASSES
     ============================================= */
-    .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+    .container {
+      max-width: var(--container-max);
+      margin: 0 auto;
+      padding: 0 var(--gutter);
+      width: 100%;
+    }
+
     .section-label {
       font-family: var(--font-body);
       font-size: 0.72rem;
@@ -82,12 +126,15 @@
       align-items: center;
       gap: 12px;
     }
+
     .section-label::before {
       content: '';
       display: inline-block;
-      width: 32px; height: 1px;
+      width: 32px;
+      height: 1px;
       background: var(--gold);
     }
+
     .section-title {
       font-family: var(--font-display);
       font-size: clamp(2rem, 4vw, 3.2rem);
@@ -95,15 +142,21 @@
       line-height: 1.2;
       color: var(--text-primary);
     }
-    .section-title span { color: var(--gold); }
+
+    .section-title span {
+      color: var(--gold);
+    }
+
     .section-subtitle {
       font-size: 1rem;
       color: var(--text-muted);
       max-width: 560px;
       margin-top: 12px;
     }
+
     .gold-line {
-      width: 64px; height: 2px;
+      width: 64px;
+      height: 2px;
       background: linear-gradient(90deg, var(--gold), transparent);
       margin: 20px 0 32px;
     }
@@ -127,30 +180,38 @@
       position: relative;
       overflow: hidden;
     }
+
     .btn::after {
       content: '';
       position: absolute;
       inset: 0;
-      background: rgba(255,255,255,0);
+      background: rgba(255, 255, 255, 0);
       transition: var(--transition);
     }
-    .btn:hover::after { background: rgba(255,255,255,0.07); }
+
+    .btn:hover::after {
+      background: rgba(255, 255, 255, 0.07);
+    }
+
     .btn-gold {
       background: linear-gradient(135deg, var(--gold), var(--gold-dark));
       color: var(--midnight);
-      box-shadow: 0 4px 24px rgba(201,168,76,0.35);
+      box-shadow: 0 4px 24px rgba(201, 168, 76, 0.35);
     }
+
     .btn-gold:hover {
       transform: translateY(-2px);
-      box-shadow: 0 8px 36px rgba(201,168,76,0.5);
+      box-shadow: 0 8px 36px rgba(201, 168, 76, 0.5);
     }
+
     .btn-outline {
       background: transparent;
       color: var(--gold);
       border: 1.5px solid var(--gold);
     }
+
     .btn-outline:hover {
-      background: rgba(201,168,76,0.08);
+      background: rgba(201, 168, 76, 0.08);
       transform: translateY(-2px);
     }
 
@@ -159,45 +220,54 @@
     ============================================= */
     #navbar {
       position: fixed;
-      top: 0; left: 0; right: 0;
+      top: 0;
+      left: 0;
+      right: 0;
       z-index: 1000;
       padding: 20px 0;
       transition: var(--transition);
     }
+
     #navbar.scrolled {
-      background: rgba(7,9,15,0.92);
-      backdrop-filter: blur(24px);
-      -webkit-backdrop-filter: blur(24px);
+      background: rgba(7, 9, 15, 0.85);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
       border-bottom: 1px solid var(--glass-border);
-      padding: 14px 0;
+      padding: 10px 0;
     }
+
     .nav-inner {
       display: flex;
       align-items: center;
       justify-content: space-between;
     }
+
     .nav-brand {
       display: flex;
       flex-direction: column;
     }
+
     .nav-brand-name {
       font-family: var(--font-display);
-      font-size: 1.3rem;
+      font-size: clamp(1.1rem, 4vw, 1.4rem);
       font-weight: 700;
       color: var(--gold);
       line-height: 1;
     }
+
     .nav-brand-sub {
       font-size: 0.6rem;
       letter-spacing: 0.18em;
       color: var(--text-muted);
       text-transform: uppercase;
     }
+
     .nav-links {
       display: flex;
       align-items: center;
       gap: 36px;
     }
+
     .nav-links a {
       font-size: 0.82rem;
       font-weight: 500;
@@ -206,20 +276,31 @@
       transition: color 0.3s;
       position: relative;
     }
+
     .nav-links a::after {
       content: '';
       position: absolute;
-      bottom: -4px; left: 0;
-      width: 0; height: 1px;
+      bottom: -4px;
+      left: 0;
+      width: 0;
+      height: 1px;
       background: var(--gold);
       transition: width 0.3s;
     }
-    .nav-links a:hover { color: var(--gold); }
-    .nav-links a:hover::after { width: 100%; }
+
+    .nav-links a:hover {
+      color: var(--gold);
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
     .nav-cta {
       padding: 10px 24px;
       font-size: 0.8rem;
     }
+
     .hamburger {
       display: none;
       flex-direction: column;
@@ -227,36 +308,55 @@
       cursor: pointer;
       padding: 4px;
     }
+
     .hamburger span {
       display: block;
-      width: 24px; height: 2px;
+      width: 24px;
+      height: 2px;
       background: var(--gold);
       border-radius: 2px;
       transition: var(--transition);
     }
+
     .mobile-menu {
-      display: none;
+      display: flex;
       position: fixed;
-      top: 0; left: 0; right: 0; bottom: 0;
-      background: rgba(7,9,15,0.97);
-      backdrop-filter: blur(20px);
-      z-index: 999;
+      inset: 0;
+      background: rgba(7, 9, 15, 0.98);
+      backdrop-filter: blur(30px);
+      -webkit-backdrop-filter: blur(30px);
+      z-index: 1100;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      gap: 40px;
+      gap: clamp(20px, 8vh, 40px);
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+      transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
     }
-    .mobile-menu.open { display: flex; }
+
+    .mobile-menu.open {
+      opacity: 1;
+      visibility: visible;
+      pointer-events: auto;
+    }
+
     .mobile-menu a {
       font-family: var(--font-display);
       font-size: 2rem;
       color: var(--text-primary);
       transition: color 0.3s;
     }
-    .mobile-menu a:hover { color: var(--gold); }
+
+    .mobile-menu a:hover {
+      color: var(--gold);
+    }
+
     .mobile-close {
       position: absolute;
-      top: 24px; right: 24px;
+      top: 24px;
+      right: 24px;
       font-size: 2rem;
       color: var(--gold);
       cursor: pointer;
@@ -275,19 +375,23 @@
       overflow: hidden;
       background: var(--midnight);
     }
+
     #hero-canvas {
       position: absolute;
       inset: 0;
-      width: 100%; height: 100%;
+      width: 100%;
+      height: 100%;
     }
+
     .hero-gradient {
       position: absolute;
       inset: 0;
       background:
-        radial-gradient(ellipse 80% 60% at 20% 40%, rgba(201,168,76,0.07) 0%, transparent 60%),
-        radial-gradient(ellipse 60% 80% at 80% 60%, rgba(100,120,200,0.05) 0%, transparent 60%),
-        linear-gradient(180deg, rgba(7,9,15,0.4) 0%, rgba(7,9,15,0.85) 100%);
+        radial-gradient(ellipse 80% 60% at 20% 40%, rgba(201, 168, 76, 0.07) 0%, transparent 60%),
+        radial-gradient(ellipse 60% 80% at 80% 60%, rgba(100, 120, 200, 0.05) 0%, transparent 60%),
+        linear-gradient(180deg, rgba(7, 9, 15, 0.4) 0%, rgba(7, 9, 15, 0.85) 100%);
     }
+
     .hero-content {
       position: relative;
       z-index: 2;
@@ -298,8 +402,9 @@
       flex-direction: column;
       align-items: center;
       padding: 80px 24px;
-      background: radial-gradient(circle at center, rgba(201,168,76,0.05) 0%, transparent 80%);
+      background: radial-gradient(circle at center, rgba(201, 168, 76, 0.05) 0%, transparent 80%);
     }
+
     .hero-badge {
       display: inline-flex;
       align-items: center;
@@ -315,16 +420,29 @@
       margin-bottom: 32px;
       backdrop-filter: blur(12px);
     }
+
     .hero-badge-dot {
-      width: 6px; height: 6px;
+      width: 6px;
+      height: 6px;
       border-radius: 50%;
       background: var(--gold);
       animation: pulse 2s infinite;
     }
+
     @keyframes pulse {
-      0%, 100% { opacity: 1; transform: scale(1); }
-      50% { opacity: 0.5; transform: scale(1.4); }
+
+      0%,
+      100% {
+        opacity: 1;
+        transform: scale(1);
+      }
+
+      50% {
+        opacity: 0.5;
+        transform: scale(1.4);
+      }
     }
+
     .hero-eyebrow {
       font-family: var(--font-body);
       font-size: 0.72rem;
@@ -333,38 +451,43 @@
       color: var(--gold);
       margin-bottom: 16px;
     }
+
     .hero-title {
       font-family: var(--font-display);
-      font-size: clamp(3.5rem, 10vw, 7.5rem);
+      font-size: clamp(2.8rem, 12vw, 8.5rem);
       font-weight: 700;
-      line-height: 0.95;
+      line-height: 0.9;
       color: var(--white);
-      margin-bottom: 32px;
+      margin-bottom: clamp(24px, 5vw, 40px);
       letter-spacing: -0.04em;
       text-wrap: balance;
-      text-shadow: 0 10px 30px rgba(0,0,0,0.5);
+      text-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
     }
+
     .hero-title .gold-word {
       background: linear-gradient(135deg, var(--gold-light), var(--gold-dark));
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      filter: drop-shadow(0 0 20px rgba(201,168,76,0.2));
+      filter: drop-shadow(0 0 20px rgba(201, 168, 76, 0.2));
     }
-    .hero-title .italic-word { 
-      font-style: italic; 
-      font-weight: 300; 
+
+    .hero-title .italic-word {
+      font-style: italic;
+      font-weight: 300;
       font-family: var(--font-display);
       opacity: 0.9;
     }
+
     .hero-tagline {
-      font-size: clamp(1rem, 2vw, 1.2rem);
+      font-size: clamp(0.95rem, 2.5vw, 1.25rem);
       color: var(--text-muted);
-      margin-bottom: 48px;
+      margin-bottom: clamp(32px, 6vw, 64px);
       font-weight: 300;
-      max-width: 600px;
+      max-width: 700px;
       letter-spacing: 0.02em;
       line-height: 1.6;
     }
+
     .hero-ctas {
       display: flex;
       flex-direction: column;
@@ -372,11 +495,13 @@
       gap: 24px;
       margin-bottom: 64px;
     }
+
     .hero-ctas-secondary {
       display: flex;
       gap: 16px;
       justify-content: center;
     }
+
     .btn-main {
       padding: 22px 64px;
       font-size: 1.2rem;
@@ -384,11 +509,12 @@
       color: var(--midnight);
       font-weight: 700;
       border-radius: 100px;
-      box-shadow: 0 20px 40px rgba(255,255,255,0.1), 0 0 0 0 rgba(255,255,255,0.1);
+      box-shadow: 0 20px 40px rgba(255, 255, 255, 0.1), 0 0 0 0 rgba(255, 255, 255, 0.1);
       border: none;
       transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
       position: relative;
     }
+
     .btn-main::before {
       content: '';
       position: absolute;
@@ -399,19 +525,22 @@
       opacity: 0;
       transition: opacity 0.4s ease;
     }
+
     .btn-main:hover::before {
       opacity: 0.5;
     }
+
     .btn-main:hover {
       background: var(--gold);
       color: var(--midnight);
       transform: translateY(-5px) scale(1.05);
-      box-shadow: 0 30px 60px rgba(201,168,76,0.4);
+      box-shadow: 0 30px 60px rgba(201, 168, 76, 0.4);
     }
+
     .btn-secondary {
-      background: rgba(255,255,255,0.05);
+      background: rgba(255, 255, 255, 0.05);
       backdrop-filter: blur(10px);
-      border: 1px solid rgba(255,255,255,0.1);
+      border: 1px solid rgba(255, 255, 255, 0.1);
       color: var(--text-primary);
       padding: 14px 32px;
       font-size: 0.9rem;
@@ -419,12 +548,14 @@
       font-weight: 500;
       transition: all 0.4s ease;
     }
+
     .btn-secondary:hover {
-      background: rgba(255,255,255,0.1);
+      background: rgba(255, 255, 255, 0.1);
       border-color: var(--gold);
       color: var(--gold);
       transform: translateY(-3px);
     }
+
     .hero-scroll {
       display: flex;
       flex-direction: column;
@@ -435,34 +566,53 @@
       letter-spacing: 0.12em;
       text-transform: uppercase;
     }
+
     .scroll-indicator {
-      width: 32px; height: 50px;
-      border: 1.5px solid rgba(201,168,76,0.3);
+      width: 32px;
+      height: 50px;
+      border: 1.5px solid rgba(201, 168, 76, 0.3);
       border-radius: 16px;
       display: flex;
       align-items: flex-start;
       justify-content: center;
       padding-top: 8px;
     }
+
     .scroll-dot {
-      width: 4px; height: 8px;
+      width: 4px;
+      height: 8px;
       border-radius: 2px;
       background: var(--gold);
       animation: scrollBounce 2s infinite;
     }
+
     @keyframes scrollBounce {
-      0% { transform: translateY(0); opacity: 1; }
-      80% { transform: translateY(18px); opacity: 0; }
-      100% { transform: translateY(0); opacity: 1; }
+      0% {
+        transform: translateY(0);
+        opacity: 1;
+      }
+
+      80% {
+        transform: translateY(18px);
+        opacity: 0;
+      }
+
+      100% {
+        transform: translateY(0);
+        opacity: 1;
+      }
     }
+
     .hero-stats {
       position: absolute;
-      right: 0; bottom: 80px;
+      right: var(--gutter);
+      bottom: 80px;
       display: flex;
       flex-direction: column;
       gap: 20px;
       z-index: 2;
     }
+
     .hero-stat-card {
       background: var(--glass);
       border: 1px solid var(--glass-border);
@@ -472,12 +622,27 @@
       text-align: right;
       animation: floatCard 6s ease-in-out infinite;
     }
-    .hero-stat-card:nth-child(2) { animation-delay: -2s; }
-    .hero-stat-card:nth-child(3) { animation-delay: -4s; }
-    @keyframes floatCard {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-8px); }
+
+    .hero-stat-card:nth-child(2) {
+      animation-delay: -2s;
     }
+
+    .hero-stat-card:nth-child(3) {
+      animation-delay: -4s;
+    }
+
+    @keyframes floatCard {
+
+      0%,
+      100% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(-8px);
+      }
+    }
+
     .hero-stat-num {
       font-family: var(--font-display);
       font-size: 2rem;
@@ -485,6 +650,7 @@
       color: var(--gold);
       line-height: 1;
     }
+
     .hero-stat-label {
       font-size: 0.7rem;
       letter-spacing: 0.1em;
@@ -492,14 +658,16 @@
       text-transform: uppercase;
       margin-top: 4px;
     }
+
     .hero-overlay-text {
       position: absolute;
-      left: 50%; top: 50%;
+      left: 50%;
+      top: 50%;
       transform: translate(-50%, -50%);
       font-family: var(--font-display);
-      font-size: clamp(10rem, 30vw, 25rem);
+      font-size: clamp(8rem, 40vw, 30rem);
       font-weight: 900;
-      color: rgba(201,168,76,0.03);
+      color: rgba(201, 168, 76, 0.03);
       white-space: nowrap;
       letter-spacing: -0.05em;
       z-index: 1;
@@ -507,57 +675,77 @@
       pointer-events: none;
       text-transform: uppercase;
     }
+
     .hero-welcome-bg {
       position: absolute;
-      top: 20%; left: 0; right: 0;
+      top: 20%;
+      left: 0;
+      right: 0;
       text-align: center;
       font-family: var(--font-display);
       font-size: clamp(5rem, 15vw, 12rem);
       font-weight: 700;
-      color: rgba(255,255,255,0.02);
+      color: rgba(255, 255, 255, 0.02);
       letter-spacing: 0.5em;
       text-transform: uppercase;
       pointer-events: none;
       z-index: 1;
       animation: tracking-in-expand 2s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
     }
+
     @keyframes tracking-in-expand {
-      0% { letter-spacing: -0.5em; opacity: 0; }
-      40% { opacity: 0.6; }
-      100% { opacity: 1; }
+      0% {
+        letter-spacing: -0.5em;
+        opacity: 0;
+      }
+
+      40% {
+        opacity: 0.6;
+      }
+
+      100% {
+        opacity: 1;
+      }
     }
 
     /* =============================================
        ABOUT SECTION
     ============================================= */
     #about {
-      padding: 120px 0;
+      padding: var(--section-padding) 0;
       background: var(--deep);
       position: relative;
       overflow: hidden;
     }
+
     #about::before {
       content: '';
       position: absolute;
-      top: 0; left: 0; right: 0;
+      top: 0;
+      left: 0;
+      right: 0;
       height: 1px;
       background: linear-gradient(90deg, transparent, var(--gold-dark), transparent);
     }
+
     .about-grid {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 80px;
+      grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+      gap: clamp(40px, 8vw, 80px);
       align-items: center;
     }
+
     .about-visual {
       position: relative;
     }
+
     .about-main-img {
       width: 100%;
       border-radius: var(--radius-lg);
       overflow: hidden;
       position: relative;
     }
+
     .about-img-placeholder {
       width: 100%;
       aspect-ratio: 4/5;
@@ -569,18 +757,21 @@
       position: relative;
       overflow: hidden;
     }
+
     .about-img-placeholder::before {
       content: '';
       position: absolute;
       inset: 0;
-      background: 
-        radial-gradient(ellipse 60% 40% at 50% 30%, rgba(201,168,76,0.12) 0%, transparent 60%),
-        linear-gradient(180deg, rgba(201,168,76,0.05) 0%, transparent 100%);
+      background:
+        radial-gradient(ellipse 60% 40% at 50% 30%, rgba(201, 168, 76, 0.12) 0%, transparent 60%),
+        linear-gradient(180deg, rgba(201, 168, 76, 0.05) 0%, transparent 100%);
     }
+
     .about-img-icon {
       font-size: 5rem;
       opacity: 0.2;
     }
+
     .about-badge-float {
       position: absolute;
       bottom: -20px;
@@ -590,14 +781,16 @@
       border-radius: var(--radius-md);
       padding: 20px 24px;
       text-align: center;
-      box-shadow: 0 16px 48px rgba(201,168,76,0.3);
+      box-shadow: 0 16px 48px rgba(201, 168, 76, 0.3);
     }
+
     .about-badge-num {
       font-family: var(--font-display);
       font-size: 2.4rem;
       font-weight: 700;
       line-height: 1;
     }
+
     .about-badge-text {
       font-size: 0.7rem;
       font-weight: 600;
@@ -605,12 +798,14 @@
       text-transform: uppercase;
       margin-top: 4px;
     }
+
     .about-pillars {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 12px;
       margin-top: 36px;
     }
+
     .pillar-item {
       background: var(--glass);
       border: 1px solid var(--glass-border);
@@ -621,34 +816,56 @@
       gap: 12px;
       transition: var(--transition);
     }
+
     .pillar-item:hover {
-      border-color: rgba(201,168,76,0.3);
-      background: rgba(201,168,76,0.04);
+      border-color: rgba(201, 168, 76, 0.3);
+      background: rgba(201, 168, 76, 0.04);
       transform: translateY(-2px);
     }
-    .pillar-icon { font-size: 1.4rem; }
-    .pillar-text { font-size: 0.8rem; font-weight: 500; color: var(--text-primary); }
+
+    .pillar-icon {
+      font-size: 1.4rem;
+    }
+
+    .pillar-text {
+      font-size: 0.8rem;
+      font-weight: 500;
+      color: var(--text-primary);
+    }
 
     /* =============================================
        SERVICES SECTION
     ============================================= */
     #services {
-      padding: 120px 0;
+      padding: var(--section-padding) 0;
       background: var(--midnight);
       position: relative;
     }
+
     .services-header {
       text-align: center;
       margin-bottom: 64px;
     }
-    .services-header .section-label { justify-content: center; }
-    .services-header .section-label::before { display: none; }
-    .services-header .section-subtitle { margin: 12px auto 0; text-align: center; }
+
+    .services-header .section-label {
+      justify-content: center;
+    }
+
+    .services-header .section-label::before {
+      display: none;
+    }
+
+    .services-header .section-subtitle {
+      margin: 12px auto 0;
+      text-align: center;
+    }
+
     .services-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
       gap: 24px;
     }
+
     .service-card {
       background: var(--glass);
       border: 1px solid var(--glass-border);
@@ -662,38 +879,50 @@
       flex-direction: column;
       gap: 16px;
     }
+
     .service-card::before {
       content: '';
       position: absolute;
-      top: 0; left: 0; right: 0;
+      top: 0;
+      left: 0;
+      right: 0;
       height: 2px;
       background: linear-gradient(90deg, transparent, var(--gold), transparent);
       opacity: 0;
       transition: var(--transition);
     }
+
     .service-card::after {
       content: '';
       position: absolute;
       inset: 0;
-      background: radial-gradient(ellipse 60% 50% at 50% -10%, rgba(201,168,76,0.08) 0%, transparent 70%);
+      background: radial-gradient(ellipse 60% 50% at 50% -10%, rgba(201, 168, 76, 0.08) 0%, transparent 70%);
       opacity: 0;
       transition: var(--transition);
     }
+
     .service-card:hover {
       transform: translateY(-8px);
-      border-color: rgba(201,168,76,0.25);
+      border-color: rgba(201, 168, 76, 0.25);
       box-shadow: var(--shadow-gold), var(--shadow-card);
     }
-    .service-card:hover::before, .service-card:hover::after { opacity: 1; }
+
+    .service-card:hover::before,
+    .service-card:hover::after {
+      opacity: 1;
+    }
+
     .service-card.featured {
-      background: linear-gradient(135deg, rgba(201,168,76,0.08) 0%, rgba(201,168,76,0.02) 100%);
-      border-color: rgba(201,168,76,0.2);
+      background: linear-gradient(135deg, rgba(201, 168, 76, 0.08) 0%, rgba(201, 168, 76, 0.02) 100%);
+      border-color: rgba(201, 168, 76, 0.2);
       grid-row: span 1;
     }
+
     .service-icon-wrap {
-      width: 56px; height: 56px;
+      width: 56px;
+      height: 56px;
       border-radius: var(--radius-sm);
-      background: rgba(201,168,76,0.1);
+      background: rgba(201, 168, 76, 0.1);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -702,10 +931,12 @@
       position: relative;
       z-index: 1;
     }
+
     .service-card:hover .service-icon-wrap {
-      background: rgba(201,168,76,0.2);
+      background: rgba(201, 168, 76, 0.2);
       transform: scale(1.1) rotate(-5deg);
     }
+
     .service-name {
       font-family: var(--font-display);
       font-size: 1.4rem;
@@ -714,6 +945,7 @@
       position: relative;
       z-index: 1;
     }
+
     .service-desc {
       font-size: 0.85rem;
       color: var(--text-muted);
@@ -722,6 +954,7 @@
       z-index: 1;
       flex: 1;
     }
+
     .service-tag {
       display: inline-block;
       padding: 4px 12px;
@@ -729,17 +962,20 @@
       font-size: 0.7rem;
       font-weight: 600;
       letter-spacing: 0.08em;
-      background: rgba(201,168,76,0.12);
+      background: rgba(201, 168, 76, 0.12);
       color: var(--gold);
       position: relative;
       z-index: 1;
     }
+
     .service-arrow {
       position: absolute;
-      bottom: 32px; right: 32px;
-      width: 36px; height: 36px;
+      bottom: 32px;
+      right: 32px;
+      width: 36px;
+      height: 36px;
       border-radius: 50%;
-      background: rgba(201,168,76,0.1);
+      background: rgba(201, 168, 76, 0.1);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -748,14 +984,17 @@
       transition: var(--transition);
       z-index: 1;
     }
+
     .service-card:hover .service-arrow {
       background: var(--gold);
       color: var(--midnight);
       transform: translate(4px, -4px);
     }
+
     .service-coming {
       position: absolute;
-      top: 20px; right: 20px;
+      top: 20px;
+      right: 20px;
       background: linear-gradient(135deg, #2D6A4F, #1B4332);
       color: #74C69D;
       border-radius: 50px;
@@ -771,23 +1010,26 @@
        OWNER SECTION
     ============================================= */
     #owner {
-      padding: 120px 0;
+      padding: var(--section-padding) 0;
       background: var(--surface);
       position: relative;
       overflow: hidden;
     }
+
     .owner-bg-text {
       position: absolute;
-      left: -40px; top: 50%;
+      left: -40px;
+      top: 50%;
       transform: translateY(-50%);
       font-family: var(--font-display);
       font-size: 12rem;
       font-weight: 700;
-      color: rgba(201,168,76,0.03);
+      color: rgba(201, 168, 76, 0.03);
       white-space: nowrap;
       user-select: none;
       line-height: 1;
     }
+
     .owner-grid {
       display: grid;
       grid-template-columns: 420px 1fr;
@@ -796,14 +1038,17 @@
       position: relative;
       z-index: 1;
     }
+
     .owner-portrait {
       position: relative;
     }
+
     .owner-img-wrap {
       border-radius: var(--radius-lg);
       overflow: hidden;
       position: relative;
     }
+
     .owner-img-placeholder {
       width: 100%;
       aspect-ratio: 3/4;
@@ -816,34 +1061,41 @@
       overflow: hidden;
       border: 1px solid var(--glass-border);
     }
+
     .owner-img-placeholder::before {
       content: '';
       position: absolute;
       inset: 0;
-      background: 
-        radial-gradient(ellipse 70% 50% at 50% 20%, rgba(201,168,76,0.15) 0%, transparent 60%),
-        linear-gradient(180deg, transparent 50%, rgba(7,9,15,0.7) 100%);
+      background:
+        radial-gradient(ellipse 70% 50% at 50% 20%, rgba(201, 168, 76, 0.15) 0%, transparent 60%),
+        linear-gradient(180deg, transparent 50%, rgba(7, 9, 15, 0.7) 100%);
     }
+
     .owner-initials {
       font-family: var(--font-display);
       font-size: 6rem;
       font-weight: 700;
-      color: rgba(201,168,76,0.25);
+      color: rgba(201, 168, 76, 0.25);
       position: relative;
       z-index: 1;
     }
+
     .owner-name-overlay {
       position: absolute;
-      bottom: 0; left: 0; right: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
       padding: 32px;
-      background: linear-gradient(0deg, rgba(7,9,15,0.9) 0%, transparent 100%);
+      background: linear-gradient(0deg, rgba(7, 9, 15, 0.9) 0%, transparent 100%);
     }
+
     .owner-name-overlay h3 {
       font-family: var(--font-display);
       font-size: 1.8rem;
       font-weight: 600;
       color: var(--white);
     }
+
     .owner-name-overlay p {
       font-size: 0.75rem;
       letter-spacing: 0.15em;
@@ -851,38 +1103,49 @@
       text-transform: uppercase;
       margin-top: 4px;
     }
+
     .owner-gold-ring {
       position: absolute;
-      top: -12px; right: -12px;
-      width: 80px; height: 80px;
+      top: -12px;
+      right: -12px;
+      width: 80px;
+      height: 80px;
       border: 2px solid var(--gold);
       border-radius: 50%;
       opacity: 0.3;
     }
+
     .owner-gold-ring2 {
       position: absolute;
-      top: -24px; right: -24px;
-      width: 100px; height: 100px;
+      top: -24px;
+      right: -24px;
+      width: 100px;
+      height: 100px;
       border: 1px solid var(--gold);
       border-radius: 50%;
       opacity: 0.15;
     }
+
     .owner-bio-label {
       display: flex;
       align-items: center;
       gap: 8px;
       margin-bottom: 8px;
     }
+
     .owner-bio-label-line {
-      width: 24px; height: 1px;
+      width: 24px;
+      height: 1px;
       background: var(--gold);
     }
+
     .owner-bio-label-text {
       font-size: 0.7rem;
       letter-spacing: 0.2em;
       text-transform: uppercase;
       color: var(--gold);
     }
+
     .owner-bio-title {
       font-family: var(--font-display);
       font-size: clamp(2rem, 3.5vw, 2.8rem);
@@ -891,24 +1154,28 @@
       color: var(--text-primary);
       margin-bottom: 8px;
     }
+
     .owner-bio-role {
       font-size: 0.85rem;
       color: var(--gold);
       letter-spacing: 0.1em;
       margin-bottom: 24px;
     }
+
     .owner-bio-text {
       font-size: 0.9rem;
       color: var(--text-muted);
       line-height: 1.9;
       margin-bottom: 16px;
     }
+
     .owner-highlights {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 12px;
       margin: 28px 0;
     }
+
     .owner-highlight {
       background: var(--glass);
       border: 1px solid var(--glass-border);
@@ -919,22 +1186,35 @@
       gap: 12px;
       transition: var(--transition);
     }
+
     .owner-highlight:hover {
-      border-color: rgba(201,168,76,0.3);
-      background: rgba(201,168,76,0.04);
+      border-color: rgba(201, 168, 76, 0.3);
+      background: rgba(201, 168, 76, 0.04);
     }
+
     .owner-highlight-icon {
-      width: 36px; height: 36px;
+      width: 36px;
+      height: 36px;
       border-radius: 50%;
-      background: rgba(201,168,76,0.12);
+      background: rgba(201, 168, 76, 0.12);
       display: flex;
       align-items: center;
       justify-content: center;
       font-size: 1rem;
       flex-shrink: 0;
     }
-    .owner-highlight-text { font-size: 0.78rem; color: var(--text-primary); font-weight: 500; }
-    .owner-highlight-sub { font-size: 0.68rem; color: var(--text-muted); margin-top: 2px; }
+
+    .owner-highlight-text {
+      font-size: 0.78rem;
+      color: var(--text-primary);
+      font-weight: 500;
+    }
+
+    .owner-highlight-sub {
+      font-size: 0.68rem;
+      color: var(--text-muted);
+      margin-top: 2px;
+    }
 
     /* =============================================
        STATS SECTION
@@ -945,17 +1225,19 @@
       position: relative;
       overflow: hidden;
     }
+
     #stats::before {
       content: '';
       position: absolute;
       inset: 0;
       background:
-        radial-gradient(ellipse 60% 80% at 20% 50%, rgba(201,168,76,0.05) 0%, transparent 60%),
-        radial-gradient(ellipse 60% 80% at 80% 50%, rgba(201,168,76,0.05) 0%, transparent 60%);
+        radial-gradient(ellipse 60% 80% at 20% 50%, rgba(201, 168, 76, 0.05) 0%, transparent 60%),
+        radial-gradient(ellipse 60% 80% at 80% 50%, rgba(201, 168, 76, 0.05) 0%, transparent 60%);
     }
+
     .stats-grid {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
       gap: 2px;
       background: var(--glass-border);
       border: 1px solid var(--glass-border);
@@ -964,6 +1246,7 @@
       position: relative;
       z-index: 1;
     }
+
     .stat-item {
       background: var(--glass);
       padding: 56px 32px;
@@ -973,17 +1256,27 @@
       transition: var(--transition);
       backdrop-filter: blur(12px);
     }
+
     .stat-item::before {
       content: '';
       position: absolute;
-      bottom: 0; left: 50%;
+      bottom: 0;
+      left: 50%;
       transform: translateX(-50%);
-      width: 0; height: 2px;
+      width: 0;
+      height: 2px;
       background: var(--gold);
       transition: width 0.5s ease;
     }
-    .stat-item:hover::before { width: 60%; }
-    .stat-item:hover { background: rgba(201,168,76,0.04); }
+
+    .stat-item:hover::before {
+      width: 60%;
+    }
+
+    .stat-item:hover {
+      background: rgba(201, 168, 76, 0.04);
+    }
+
     .stat-number {
       font-family: var(--font-display);
       font-size: clamp(2.4rem, 4vw, 3.6rem);
@@ -992,7 +1285,11 @@
       line-height: 1;
       margin-bottom: 12px;
     }
-    .stat-suffix { font-size: 0.6em; }
+
+    .stat-suffix {
+      font-size: 0.6em;
+    }
+
     .stat-label {
       font-size: 0.78rem;
       font-weight: 500;
@@ -1000,9 +1297,10 @@
       text-transform: uppercase;
       color: var(--text-muted);
     }
+
     .stat-desc {
       font-size: 0.7rem;
-      color: rgba(138,143,168,0.6);
+      color: rgba(138, 143, 168, 0.6);
       margin-top: 6px;
     }
 
@@ -1010,44 +1308,52 @@
        VISION SECTION
     ============================================= */
     #vision {
-      padding: 120px 0;
+      padding: var(--section-padding) 0;
       background: var(--deep);
       position: relative;
       overflow: hidden;
     }
+
     .vision-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 80px;
       align-items: center;
     }
+
     .vision-timeline {
       display: flex;
       flex-direction: column;
       gap: 0;
     }
+
     .vision-item {
       display: flex;
       gap: 24px;
       position: relative;
     }
+
     .vision-item:not(:last-child) .vision-line {
       position: absolute;
-      left: 19px; top: 48px;
+      left: 19px;
+      top: 48px;
       width: 2px;
       height: calc(100% - 24px);
       background: linear-gradient(180deg, var(--gold-dark), transparent);
     }
+
     .vision-dot-wrap {
       display: flex;
       flex-direction: column;
       align-items: center;
       flex-shrink: 0;
     }
+
     .vision-dot {
-      width: 40px; height: 40px;
+      width: 40px;
+      height: 40px;
       border-radius: 50%;
-      background: rgba(201,168,76,0.1);
+      background: rgba(201, 168, 76, 0.1);
       border: 2px solid var(--gold-dark);
       display: flex;
       align-items: center;
@@ -1058,17 +1364,21 @@
       z-index: 1;
       transition: var(--transition);
     }
+
     .vision-item.active .vision-dot {
       background: var(--gold);
       border-color: var(--gold);
     }
+
     .vision-item.upcoming .vision-dot {
-      background: rgba(100,200,120,0.1);
-      border-color: rgba(100,200,120,0.4);
+      background: rgba(100, 200, 120, 0.1);
+      border-color: rgba(100, 200, 120, 0.4);
     }
+
     .vision-body {
       padding-bottom: 40px;
     }
+
     .vision-year {
       font-size: 0.68rem;
       letter-spacing: 0.2em;
@@ -1077,6 +1387,7 @@
       margin-bottom: 6px;
       font-weight: 600;
     }
+
     .vision-title {
       font-family: var(--font-display);
       font-size: 1.2rem;
@@ -1084,28 +1395,36 @@
       color: var(--text-primary);
       margin-bottom: 6px;
     }
+
     .vision-text {
       font-size: 0.83rem;
       color: var(--text-muted);
       line-height: 1.7;
     }
-    .vision-right .section-subtitle { max-width: 100%; }
+
+    .vision-right .section-subtitle {
+      max-width: 100%;
+    }
+
     .vision-ayurveda-card {
       margin-top: 40px;
-      background: linear-gradient(135deg, rgba(46,90,70,0.15) 0%, rgba(20,50,35,0.1) 100%);
-      border: 1px solid rgba(100,200,120,0.2);
+      background: linear-gradient(135deg, rgba(46, 90, 70, 0.15) 0%, rgba(20, 50, 35, 0.1) 100%);
+      border: 1px solid rgba(100, 200, 120, 0.2);
       border-radius: var(--radius-lg);
       padding: 32px;
       position: relative;
       overflow: hidden;
     }
+
     .vision-ayurveda-card::before {
       content: '🌿';
       position: absolute;
-      right: 20px; top: 16px;
+      right: 20px;
+      top: 16px;
       font-size: 4rem;
       opacity: 0.15;
     }
+
     .vision-ayurveda-title {
       font-family: var(--font-display);
       font-size: 1.5rem;
@@ -1113,14 +1432,16 @@
       color: #74C69D;
       margin-bottom: 8px;
     }
+
     .vision-ayurveda-text {
       font-size: 0.85rem;
       color: var(--text-muted);
       line-height: 1.7;
     }
+
     .vision-ayurveda-badge {
       display: inline-block;
-      background: rgba(100,200,120,0.12);
+      background: rgba(100, 200, 120, 0.12);
       color: #74C69D;
       border-radius: 50px;
       padding: 4px 14px;
@@ -1135,24 +1456,29 @@
        CONTACT SECTION
     ============================================= */
     #contact {
-      padding: 120px 0;
+      padding: var(--section-padding) 0;
       background: var(--surface);
       position: relative;
       overflow: hidden;
     }
+
     #contact::before {
       content: '';
       position: absolute;
-      top: 0; left: 0; right: 0;
+      top: 0;
+      left: 0;
+      right: 0;
       height: 1px;
       background: linear-gradient(90deg, transparent, var(--gold-dark), transparent);
     }
+
     .contact-grid {
       display: grid;
-      grid-template-columns: 400px 1fr;
-      gap: 80px;
+      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+      gap: clamp(40px, 8vw, 80px);
       align-items: start;
     }
+
     .contact-info-title {
       font-family: var(--font-display);
       font-size: 2.2rem;
@@ -1160,17 +1486,20 @@
       color: var(--text-primary);
       margin-bottom: 16px;
     }
+
     .contact-info-text {
       font-size: 0.875rem;
       color: var(--text-muted);
       line-height: 1.8;
       margin-bottom: 40px;
     }
+
     .contact-links {
       display: flex;
       flex-direction: column;
       gap: 16px;
     }
+
     .contact-link-item {
       display: flex;
       align-items: center;
@@ -1182,29 +1511,46 @@
       transition: var(--transition);
       cursor: pointer;
     }
+
     .contact-link-item:hover {
-      border-color: rgba(201,168,76,0.3);
-      background: rgba(201,168,76,0.04);
+      border-color: rgba(201, 168, 76, 0.3);
+      background: rgba(201, 168, 76, 0.04);
       transform: translateX(4px);
     }
+
     .contact-link-icon {
-      width: 44px; height: 44px;
+      width: 44px;
+      height: 44px;
       border-radius: var(--radius-sm);
-      background: rgba(201,168,76,0.1);
+      background: rgba(201, 168, 76, 0.1);
       display: flex;
       align-items: center;
       justify-content: center;
       font-size: 1.2rem;
       flex-shrink: 0;
     }
-    .contact-link-label { font-size: 0.7rem; letter-spacing: 0.1em; color: var(--gold); text-transform: uppercase; margin-bottom: 2px; }
-    .contact-link-value { font-size: 0.85rem; font-weight: 500; color: var(--text-primary); }
+
+    .contact-link-label {
+      font-size: 0.7rem;
+      letter-spacing: 0.1em;
+      color: var(--gold);
+      text-transform: uppercase;
+      margin-bottom: 2px;
+    }
+
+    .contact-link-value {
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: var(--text-primary);
+    }
+
     .contact-form {
       background: var(--glass);
       border: 1px solid var(--glass-border);
       border-radius: var(--radius-xl);
       padding: 48px;
     }
+
     .form-title {
       font-family: var(--font-display);
       font-size: 1.6rem;
@@ -1212,8 +1558,17 @@
       color: var(--text-primary);
       margin-bottom: 32px;
     }
-    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-    .form-group { margin-bottom: 20px; }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
     .form-group label {
       display: block;
       font-size: 0.72rem;
@@ -1223,11 +1578,12 @@
       color: var(--text-muted);
       margin-bottom: 8px;
     }
+
     .form-group input,
     .form-group select,
     .form-group textarea {
       width: 100%;
-      background: rgba(255,255,255,0.03);
+      background: rgba(255, 255, 255, 0.03);
       border: 1px solid var(--glass-border);
       border-radius: var(--radius-sm);
       padding: 14px 18px;
@@ -1238,16 +1594,29 @@
       transition: var(--transition);
       appearance: none;
     }
+
     .form-group input::placeholder,
-    .form-group textarea::placeholder { color: rgba(138,143,168,0.5); }
+    .form-group textarea::placeholder {
+      color: rgba(138, 143, 168, 0.5);
+    }
+
     .form-group input:focus,
     .form-group select:focus,
     .form-group textarea:focus {
-      border-color: rgba(201,168,76,0.5);
-      background: rgba(201,168,76,0.04);
+      border-color: rgba(201, 168, 76, 0.5);
+      background: rgba(201, 168, 76, 0.04);
     }
-    .form-group textarea { height: 120px; resize: vertical; }
-    .form-group select option { background: var(--surface2); color: var(--text-primary); }
+
+    .form-group textarea {
+      height: 120px;
+      resize: vertical;
+    }
+
+    .form-group select option {
+      background: var(--surface2);
+      color: var(--text-primary);
+    }
+
     .form-submit {
       width: 100%;
       padding: 16px;
@@ -1263,12 +1632,24 @@
       border-top: 1px solid var(--glass-border);
       padding: 64px 0 32px;
     }
+
     .footer-grid {
       display: grid;
-      grid-template-columns: 2fr 1fr 1fr 1fr;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
       gap: 48px;
       margin-bottom: 48px;
     }
+    
+    .footer-grid > div:first-child {
+      grid-column: span 1;
+    }
+    
+    @media (min-width: 1025px) {
+      .footer-grid {
+        grid-template-columns: 2fr 1fr 1fr 1fr;
+      }
+    }
+
     .footer-brand-name {
       font-family: var(--font-display);
       font-size: 1.6rem;
@@ -1276,6 +1657,7 @@
       color: var(--gold);
       margin-bottom: 4px;
     }
+
     .footer-brand-sub {
       font-size: 0.65rem;
       letter-spacing: 0.18em;
@@ -1283,12 +1665,14 @@
       text-transform: uppercase;
       margin-bottom: 16px;
     }
+
     .footer-desc {
       font-size: 0.82rem;
       color: var(--text-muted);
       line-height: 1.8;
       max-width: 280px;
     }
+
     .footer-col-title {
       font-size: 0.72rem;
       font-weight: 700;
@@ -1297,38 +1681,58 @@
       color: var(--gold);
       margin-bottom: 20px;
     }
-    .footer-links { display: flex; flex-direction: column; gap: 12px; }
+
+    .footer-links {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
     .footer-links a {
       font-size: 0.82rem;
       color: var(--text-muted);
       transition: color 0.3s;
     }
-    .footer-links a:hover { color: var(--gold); }
+
+    .footer-links a:hover {
+      color: var(--gold);
+    }
+
     .footer-divider {
       height: 1px;
       background: var(--glass-border);
       margin-bottom: 28px;
     }
+
     .footer-bottom {
       display: flex;
       align-items: center;
       justify-content: space-between;
     }
+
     .footer-copy {
       font-size: 0.75rem;
-      color: rgba(138,143,168,0.5);
+      color: rgba(138, 143, 168, 0.5);
     }
-    .footer-copy span { color: var(--gold); }
+
+    .footer-copy span {
+      color: var(--gold);
+    }
+
     .footer-legal {
       display: flex;
       gap: 24px;
     }
+
     .footer-legal a {
       font-size: 0.75rem;
-      color: rgba(138,143,168,0.5);
+      color: rgba(138, 143, 168, 0.5);
       transition: color 0.3s;
     }
-    .footer-legal a:hover { color: var(--gold); }
+
+    .footer-legal a:hover {
+      color: var(--gold);
+    }
 
     /* =============================================
        DECORATIVE
@@ -1344,853 +1748,1027 @@
        RESPONSIVE
     ============================================= */
     @media (max-width: 1024px) {
-      .services-grid { grid-template-columns: repeat(2, 1fr); }
-      .owner-grid { grid-template-columns: 1fr 1fr; gap: 48px; }
-      .stats-grid { grid-template-columns: repeat(2, 1fr); }
-      .footer-grid { grid-template-columns: 1fr 1fr; gap: 36px; }
-      .hero-stats { display: none; }
-      .about-grid { grid-template-columns: 1fr; gap: 48px; }
-      .about-visual { max-width: 400px; margin: 0 auto; }
+      .services-grid {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      }
+
+      .owner-grid {
+        grid-template-columns: 1fr;
+        gap: 48px;
+        max-width: 700px;
+        margin: 0 auto;
+      }
+
+      .stats-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      }
+
+      .footer-grid {
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 36px;
+      }
+
+      .hero-stats {
+        position: relative;
+        right: auto;
+        bottom: auto;
+        flex-direction: row;
+        justify-content: center;
+        width: 100%;
+        margin-top: 40px;
+        gap: 12px;
+      }
+
+      .hero-stat-card {
+        padding: 12px 16px;
+        text-align: center;
+      }
+
+      .hero-stat-num {
+        font-size: 1.5rem;
+      }
+
+      .hero-stat-label {
+        font-size: 0.6rem;
+      }
+
+      .about-grid {
+        grid-template-columns: 1fr;
+        gap: 48px;
+      }
+
+      .about-visual {
+        max-width: 400px;
+        margin: 0 auto;
+      }
     }
 
     @media (max-width: 768px) {
-      .nav-links { display: none; }
-      .hamburger { display: flex; }
-      .services-grid { grid-template-columns: 1fr; }
-      .owner-grid { grid-template-columns: 1fr; gap: 40px; }
-      .owner-portrait { max-width: 340px; margin: 0 auto; }
-      .vision-grid { grid-template-columns: 1fr; gap: 48px; }
-      .contact-grid { grid-template-columns: 1fr; gap: 40px; }
-      .form-row { grid-template-columns: 1fr; }
-      .contact-form { padding: 32px 24px; }
-      .footer-grid { grid-template-columns: 1fr; gap: 28px; }
-      .footer-bottom { flex-direction: column; gap: 12px; text-align: center; }
-      .hero-ctas { gap: 12px; }
-      .about-pillars { grid-template-columns: 1fr; }
-      .owner-highlights { grid-template-columns: 1fr; }
-      #about, #services, #owner, #vision, #contact { padding: 80px 0; }
-      #stats { padding: 64px 0; }
+      .nav-links {
+        display: none;
+      }
+
+      .hamburger {
+        display: flex;
+      }
+
+      .services-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .owner-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+
+      .owner-portrait {
+        max-width: 340px;
+        margin: 0 auto;
+      }
+
+      .vision-grid {
+        grid-template-columns: 1fr;
+        gap: 48px;
+      }
+
+      .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        max-width: 600px;
+        margin: 0 auto;
+      }
+
+      .form-row {
+        grid-template-columns: 1fr;
+      }
+
+      .contact-form {
+        padding: 32px 24px;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 28px;
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+        gap: 12px;
+        text-align: center;
+      }
+
+      .hero-ctas {
+        gap: 12px;
+      }
+
+      .about-pillars {
+        grid-template-columns: 1fr;
+      }
+
+      .owner-highlights {
+        grid-template-columns: 1fr;
+      }
+
+      #about,
+      #services,
+      #owner,
+      #vision,
+      #contact {
+        padding: 80px 0;
+      }
+
+      #stats {
+        padding: 64px 0;
+      }
     }
 
     @media (max-width: 480px) {
-      .stats-grid { grid-template-columns: 1fr 1fr; }
-      .stat-item { padding: 32px 20px; }
-      .hero-title { font-size: 2.4rem; }
-      .btn { padding: 12px 24px; font-size: 0.8rem; }
+      .about-grid, .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .stats-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .stat-item {
+        padding: 32px 20px;
+      }
+
+      .hero-title {
+        font-size: clamp(2.4rem, 15vw, 3.5rem);
+      }
+
+      .hero-badge {
+        font-size: 0.65rem;
+        padding: 6px 14px;
+      }
+
+      .btn {
+        width: 100%;
+        justify-content: center;
+        padding: 14px 24px;
+      }
+
+      .hero-ctas-secondary {
+        flex-direction: column;
+        width: 100%;
+      }
     }
 
     /* =============================================
        AOS OVERRIDES
     ============================================= */
-    [data-aos] { pointer-events: none; }
-    [data-aos].aos-animate { pointer-events: auto; }
+    [data-aos] {
+      pointer-events: none;
+    }
+
+    [data-aos].aos-animate {
+      pointer-events: auto;
+    }
   </style>
 </head>
 
 <body>
 
-<!-- =============================================
+  <!-- =============================================
      MOBILE MENU
 ============================================= -->
-<nav class="mobile-menu" id="mobileMenu">
-  <button class="mobile-close" id="mobileClose">✕</button>
-  <a href="#about" onclick="closeMobileMenu()">About</a>
-  <a href="#services" onclick="closeMobileMenu()">Services</a>
-  <a href="#owner" onclick="closeMobileMenu()">Leadership</a>
-  <a href="#stats" onclick="closeMobileMenu()">Impact</a>
-  <a href="#vision" onclick="closeMobileMenu()">Vision</a>
-  <a href="#contact" onclick="closeMobileMenu()">Contact</a>
-</nav>
+  <nav class="mobile-menu" id="mobileMenu">
+    <button class="mobile-close" id="mobileClose">✕</button>
+    <a href="#about" onclick="closeMobileMenu()">About</a>
+    <a href="#services" onclick="closeMobileMenu()">Services</a>
+    <a href="#owner" onclick="closeMobileMenu()">Leadership</a>
+    <a href="#stats" onclick="closeMobileMenu()">Impact</a>
+    <a href="#vision" onclick="closeMobileMenu()">Vision</a>
+    <a href="#contact" onclick="closeMobileMenu()">Contact</a>
+  </nav>
 
-<!-- =============================================
+  <!-- =============================================
      NAVIGATION
 ============================================= -->
-<header id="navbar">
-  <div class="container">
-    <nav class="nav-inner">
-      <a href="#" class="nav-brand">
-        <span class="nav-brand-name">Ananya Lifestyle</span>
-        <span class="nav-brand-sub">India Pvt. Ltd.</span>
-      </a>
-      <ul class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#owner">Leadership</a></li>
-        <li><a href="#stats">Impact</a></li>
-        <li><a href="#vision">Vision</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-      <button class="btn btn-gold nav-cta" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Get in Touch</button>
-      <div class="hamburger" id="hamburger" aria-label="Menu">
-        <span></span><span></span><span></span>
-      </div>
-    </nav>
-  </div>
-</header>
+  <header id="navbar">
+    <div class="container">
+      <nav class="nav-inner">
+        <a href="#" class="nav-brand">
+          <span class="nav-brand-name">Ananya Lifestyle</span>
+          <span class="nav-brand-sub">India Pvt. Ltd.</span>
+        </a>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#owner">Leadership</a></li>
+          <li><a href="#stats">Impact</a></li>
+          <li><a href="#vision">Vision</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <button class="btn btn-gold nav-cta"
+          onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Get in Touch</button>
+        <div class="hamburger" id="hamburger" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </div>
+      </nav>
+    </div>
+  </header>
 
-<!-- =============================================
+  <!-- =============================================
      HERO SECTION
 ============================================= -->
-<section id="hero" aria-label="Hero">
-  <canvas id="hero-canvas"></canvas>
-  <div class="hero-gradient"></div>
-  <div class="hero-welcome-bg">WELCOME</div>
-  <div class="hero-overlay-text">ANANYA</div>
+  <section id="hero" aria-label="Hero">
+    <canvas id="hero-canvas"></canvas>
+    <div class="hero-gradient"></div>
+    <div class="hero-welcome-bg">WELCOME</div>
+    <div class="hero-overlay-text">ANANYA</div>
 
-  <div class="container" style="position:relative;z-index:2;padding-top:140px;padding-bottom:100px;">
-    <div class="hero-content">
-      <div class="hero-badge" data-aos="fade-down" data-aos-duration="800">
-        <span class="hero-badge-dot"></span>
-        Pioneering Multi-Vertical Excellence
-      </div>
+    <div class="container" style="position:relative;z-index:2;padding-top:140px;padding-bottom:100px;">
+      <div class="hero-content">
+        <div class="hero-badge" data-aos="fade-down" data-aos-duration="800">
+          <span class="hero-badge-dot"></span>
+          Pioneering Multi-Vertical Excellence
+        </div>
 
-      <p class="hero-eyebrow" data-aos="fade-up" data-aos-delay="100">Ananya Lifestyle India Private Limited</p>
+        <p class="hero-eyebrow" data-aos="fade-up" data-aos-delay="100">Ananya Lifestyle India Private Limited</p>
 
-      <h1 class="hero-title" data-aos="zoom-out" data-aos-duration="1200">
-        Crafting <span class="gold-word">Lifestyle,</span><br />
-        <span class="italic-word">Technology</span><br />
-        &amp; Legacy
-      </h1>
+        <h1 class="hero-title" data-aos="zoom-out" data-aos-duration="1200">
+          Crafting <span class="gold-word">Lifestyle,</span><br />
+          <span class="italic-word">Technology</span><br />
+          &amp; Legacy
+        </h1>
 
-      <p class="hero-tagline" data-aos="fade-up" data-aos-delay="300">
-        A diversified corporate conglomerate building enduring brands across Jewelry, Astrology, IT, and Global Commerce.
-      </p>
+        <p class="hero-tagline" data-aos="fade-up" data-aos-delay="300">
+          A diversified corporate conglomerate building enduring brands across Jewelry, Astrology, IT, and Global
+          Commerce.
+        </p>
 
-      <div class="hero-ctas" data-aos="fade-up" data-aos-delay="400">
-        <button class="btn btn-main" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">
-          Partner With Us ✦
-        </button>
-        <div class="hero-ctas-secondary">
-          <a href="https://grsilverdesigns.com" target="_blank" rel="noopener" class="btn btn-secondary">
-            💎 Jewelry
-          </a>
-          <a href="https://rashiyog.com" target="_blank" rel="noopener" class="btn btn-secondary">
-            🔮 Astrology
-          </a>
+        <div class="hero-ctas" data-aos="fade-up" data-aos-delay="400">
+          <button class="btn btn-main" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">
+            Partner With Us ✦
+          </button>
+          <div class="hero-ctas-secondary">
+            <a href="https://grsilverdesigns.com" target="_blank" rel="noopener" class="btn btn-secondary">
+              💎 Jewelry
+            </a>
+            <a href="https://rashiyog.com" target="_blank" rel="noopener" class="btn btn-secondary">
+              🔮 Astrology
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-scroll" data-aos="fade-up" data-aos-delay="600">
+          <div class="scroll-indicator">
+            <div class="scroll-dot"></div>
+          </div>
+          <span>Discover Our Universe</span>
         </div>
       </div>
+    </div>
 
-      <div class="hero-scroll" data-aos="fade-up" data-aos-delay="600">
-        <div class="scroll-indicator">
-          <div class="scroll-dot"></div>
-        </div>
-        <span>Discover Our Universe</span>
+    <!-- Floating stat cards (desktop) -->
+    <div class="hero-stats" aria-hidden="true">
+      <div class="hero-stat-card">
+        <div class="hero-stat-num">17<span class="stat-suffix">+</span></div>
+        <div class="hero-stat-label">Years Experience</div>
+      </div>
+      <div class="hero-stat-card">
+        <div class="hero-stat-num">5</div>
+        <div class="hero-stat-label">Business Verticals</div>
+      </div>
+      <div class="hero-stat-card">
+        <div class="hero-stat-num">Global</div>
+        <div class="hero-stat-label">Brand Reach</div>
       </div>
     </div>
-  </div>
+  </section>
 
-  <!-- Floating stat cards (desktop) -->
-  <div class="hero-stats" aria-hidden="true">
-    <div class="hero-stat-card">
-      <div class="hero-stat-num">17<span class="stat-suffix">+</span></div>
-      <div class="hero-stat-label">Years Experience</div>
-    </div>
-    <div class="hero-stat-card">
-      <div class="hero-stat-num">5</div>
-      <div class="hero-stat-label">Business Verticals</div>
-    </div>
-    <div class="hero-stat-card">
-      <div class="hero-stat-num">Global</div>
-      <div class="hero-stat-label">Brand Reach</div>
-    </div>
-  </div>
-</section>
-
-<!-- =============================================
+  <!-- =============================================
      ABOUT SECTION
 ============================================= -->
-<section id="about" aria-label="About the Company">
-  <div class="container">
-    <div class="about-grid">
+  <section id="about" aria-label="About the Company">
+    <div class="container">
+      <div class="about-grid">
 
-      <!-- Visual -->
-      <div class="about-visual" data-aos="fade-right" data-aos-duration="800">
-        <div class="about-img-placeholder">
-          <span class="about-img-icon">🏛️</span>
+        <!-- Visual -->
+        <div class="about-visual" data-aos="fade-right" data-aos-duration="800">
+          <div class="about-img-placeholder">
+            <span class="about-img-icon">🏛️</span>
+          </div>
+          <div class="about-badge-float">
+            <div class="about-badge-num">2007</div>
+            <div class="about-badge-text">Founded</div>
+          </div>
         </div>
-        <div class="about-badge-float">
-          <div class="about-badge-num">2007</div>
-          <div class="about-badge-text">Founded</div>
-        </div>
-      </div>
 
-      <!-- Content -->
-      <div data-aos="fade-left" data-aos-duration="800" data-aos-delay="100">
-        <p class="section-label">Who We Are</p>
-        <h2 class="section-title">One Group.<br /><span>Many Legacies.</span></h2>
-        <div class="gold-line"></div>
+        <!-- Content -->
+        <div data-aos="fade-left" data-aos-duration="800" data-aos-delay="100">
+          <p class="section-label">Who We Are</p>
+          <h2 class="section-title">One Group.<br /><span>Many Legacies.</span></h2>
+          <div class="gold-line"></div>
 
-        <p style="font-size:0.9rem;color:var(--text-muted);line-height:1.9;margin-bottom:20px;">
-          Ananya Lifestyle India Pvt. Ltd. is a forward-thinking, multi-vertical corporate conglomerate headquartered in India. Founded and led by visionary entrepreneur Rahul Goyal, the group has grown from a single bold idea into a diversified ecosystem of premium businesses.
-        </p>
-        <p style="font-size:0.9rem;color:var(--text-muted);line-height:1.9;margin-bottom:32px;">
-          From handcrafted silver jewelry that reaches international markets, to AI-powered astrology consulting that touches millions of lives — Ananya Lifestyle stands at the intersection of tradition and technology, culture and commerce.
-        </p>
+          <p style="font-size:0.9rem;color:var(--text-muted);line-height:1.9;margin-bottom:20px;">
+            Ananya Lifestyle India Pvt. Ltd. is a forward-thinking, multi-vertical corporate conglomerate headquartered
+            in India. Founded and led by visionary entrepreneur Rahul Goyal, the group has grown from a single bold idea
+            into a diversified ecosystem of premium businesses.
+          </p>
+          <p style="font-size:0.9rem;color:var(--text-muted);line-height:1.9;margin-bottom:32px;">
+            From handcrafted silver jewelry that reaches international markets, to AI-powered astrology consulting that
+            touches millions of lives — Ananya Lifestyle stands at the intersection of tradition and technology, culture
+            and commerce.
+          </p>
 
-        <div class="about-pillars">
-          <div class="pillar-item">
-            <span class="pillar-icon">💎</span>
-            <span class="pillar-text">Jewelry Manufacturing</span>
-          </div>
-          <div class="pillar-item">
-            <span class="pillar-icon">🔮</span>
-            <span class="pillar-text">Astrology Consulting</span>
-          </div>
-          <div class="pillar-item">
-            <span class="pillar-icon">💻</span>
-            <span class="pillar-text">Information Technology</span>
-          </div>
-          <!-- <div class="pillar-item">
+          <div class="about-pillars">
+            <div class="pillar-item">
+              <span class="pillar-icon">💎</span>
+              <span class="pillar-text">Jewelry Manufacturing</span>
+            </div>
+            <div class="pillar-item">
+              <span class="pillar-icon">🔮</span>
+              <span class="pillar-text">Astrology Consulting</span>
+            </div>
+            <div class="pillar-item">
+              <span class="pillar-icon">💻</span>
+              <span class="pillar-text">Information Technology</span>
+            </div>
+            <!-- <div class="pillar-item">
             <span class="pillar-icon">🤝</span>
             <span class="pillar-text">B2B &amp; B2C Services</span>
           </div> -->
-          <div class="pillar-item">
-            <span class="pillar-icon">🌿</span>
-            <span class="pillar-text">Ayurveda (Upcoming)</span>
-          </div>
-          <div class="pillar-item">
-            <span class="pillar-icon">🌐</span>
-            <span class="pillar-text">Global Expansion</span>
+            <div class="pillar-item">
+              <span class="pillar-icon">🌿</span>
+              <span class="pillar-text">Ayurveda (Upcoming)</span>
+            </div>
+            <div class="pillar-item">
+              <span class="pillar-icon">🌐</span>
+              <span class="pillar-text">Global Expansion</span>
+            </div>
           </div>
         </div>
+
       </div>
-
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- =============================================
+  <!-- =============================================
      SERVICES SECTION
 ============================================= -->
-<section id="services" aria-label="Our Services">
-  <div class="container">
-    <div class="services-header">
-      <p class="section-label">What We Do</p>
-      <h2 class="section-title">Our Business <span>Verticals</span></h2>
-      <p class="section-subtitle">Five distinct domains — each powered by expertise, passion, and a commitment to excellence.</p>
+  <section id="services" aria-label="Our Services">
+    <div class="container">
+      <div class="services-header">
+        <p class="section-label">What We Do</p>
+        <h2 class="section-title">Our Business <span>Verticals</span></h2>
+        <p class="section-subtitle">Five distinct domains — each powered by expertise, passion, and a commitment to
+          excellence.</p>
+      </div>
+
+      <div class="services-grid">
+
+        <!-- Jewelry -->
+        <a href="https://grsilverdesigns.com" target="_blank" rel="noopener" class="service-card featured"
+          data-aos="fade-up" data-aos-delay="0">
+          <div class="service-icon-wrap">💎</div>
+          <h3 class="service-name">Jewelry Manufacturing</h3>
+          <p class="service-desc">Handcrafted silver jewelry with premium finish, serving retail, wholesale, and
+            international export markets under the GR Silver Designs brand.</p>
+          <span class="service-tag">grsilverdesigns.com</span>
+          <div class="service-arrow">→</div>
+        </a>
+
+        <!-- Astrology -->
+        <a href="https://rashiyog.com" target="_blank" rel="noopener" class="service-card featured" data-aos="fade-up"
+          data-aos-delay="100">
+          <div class="service-icon-wrap">🔮</div>
+          <h3 class="service-name">Astrology Consulting</h3>
+          <p class="service-desc">Expert Vedic astrology, kundli analysis, and personalized life guidance through
+            RashiYog — blending ancient wisdom with modern accessibility.</p>
+          <span class="service-tag">rashiyog.com</span>
+          <div class="service-arrow">→</div>
+        </a>
+
+        <!-- IT -->
+        <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="service-icon-wrap">💻</div>
+          <h3 class="service-name">IT Services</h3>
+          <p class="service-desc">Full-spectrum technology solutions — from web development and digital transformation
+            to product engineering and SaaS platforms for modern businesses.</p>
+          <span class="service-tag">Technology</span>
+          <div class="service-arrow">→</div>
+        </div>
+
+        <!-- B2B B2C -->
+        <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="service-icon-wrap">🤝</div>
+          <h3 class="service-name">B2B &amp; B2C Services</h3>
+          <p class="service-desc">Strategic business-to-business and consumer-facing services including procurement,
+            distribution, marketing, and supply chain management across sectors.</p>
+          <span class="service-tag">Commerce</span>
+          <div class="service-arrow">→</div>
+        </div>
+
+        <!-- Ayurveda -->
+        <div class="service-card" data-aos="fade-up" data-aos-delay="400" style="grid-column: span 2;">
+          <span class="service-coming">Coming Soon</span>
+          <div class="service-icon-wrap">🌿</div>
+          <h3 class="service-name">Ayurveda &amp; Wellness</h3>
+          <p class="service-desc">The next frontier for Ananya Lifestyle — a premium Ayurvedic product and wellness
+            consulting vertical, rooted in ancient Indian medicine and designed for global health-conscious consumers.
+            Launching soon with handcrafted formulations and holistic wellness programs.</p>
+          <span class="service-tag">Wellness · Natural · Heritage</span>
+          <div class="service-arrow">→</div>
+        </div>
+
+      </div>
     </div>
+  </section>
 
-    <div class="services-grid">
-
-      <!-- Jewelry -->
-      <a href="https://grsilverdesigns.com" target="_blank" rel="noopener" class="service-card featured"
-         data-aos="fade-up" data-aos-delay="0">
-        <div class="service-icon-wrap">💎</div>
-        <h3 class="service-name">Jewelry Manufacturing</h3>
-        <p class="service-desc">Handcrafted silver jewelry with premium finish, serving retail, wholesale, and international export markets under the GR Silver Designs brand.</p>
-        <span class="service-tag">grsilverdesigns.com</span>
-        <div class="service-arrow">→</div>
-      </a>
-
-      <!-- Astrology -->
-      <a href="https://rashiyog.com" target="_blank" rel="noopener" class="service-card featured"
-         data-aos="fade-up" data-aos-delay="100">
-        <div class="service-icon-wrap">🔮</div>
-        <h3 class="service-name">Astrology Consulting</h3>
-        <p class="service-desc">Expert Vedic astrology, kundli analysis, and personalized life guidance through RashiYog — blending ancient wisdom with modern accessibility.</p>
-        <span class="service-tag">rashiyog.com</span>
-        <div class="service-arrow">→</div>
-      </a>
-
-      <!-- IT -->
-      <div class="service-card" data-aos="fade-up" data-aos-delay="200">
-        <div class="service-icon-wrap">💻</div>
-        <h3 class="service-name">IT Services</h3>
-        <p class="service-desc">Full-spectrum technology solutions — from web development and digital transformation to product engineering and SaaS platforms for modern businesses.</p>
-        <span class="service-tag">Technology</span>
-        <div class="service-arrow">→</div>
-      </div>
-
-      <!-- B2B B2C -->
-      <div class="service-card" data-aos="fade-up" data-aos-delay="300">
-        <div class="service-icon-wrap">🤝</div>
-        <h3 class="service-name">B2B &amp; B2C Services</h3>
-        <p class="service-desc">Strategic business-to-business and consumer-facing services including procurement, distribution, marketing, and supply chain management across sectors.</p>
-        <span class="service-tag">Commerce</span>
-        <div class="service-arrow">→</div>
-      </div>
-
-      <!-- Ayurveda -->
-      <div class="service-card" data-aos="fade-up" data-aos-delay="400" style="grid-column: span 2;">
-        <span class="service-coming">Coming Soon</span>
-        <div class="service-icon-wrap">🌿</div>
-        <h3 class="service-name">Ayurveda &amp; Wellness</h3>
-        <p class="service-desc">The next frontier for Ananya Lifestyle — a premium Ayurvedic product and wellness consulting vertical, rooted in ancient Indian medicine and designed for global health-conscious consumers. Launching soon with handcrafted formulations and holistic wellness programs.</p>
-        <span class="service-tag">Wellness · Natural · Heritage</span>
-        <div class="service-arrow">→</div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- =============================================
+  <!-- =============================================
      OWNER SECTION
 ============================================= -->
-<section id="owner" aria-label="Leadership">
-  <div class="owner-bg-text" aria-hidden="true">RAHUL</div>
-  <div class="container">
-    <div class="owner-grid">
+  <section id="owner" aria-label="Leadership">
+    <div class="owner-bg-text" aria-hidden="true">RAHUL</div>
+    <div class="container">
+      <div class="owner-grid">
 
-      <!-- Portrait -->
-      <div class="owner-portrait" data-aos="fade-right" data-aos-duration="800">
-        <div class="owner-img-wrap">
-          <div class="owner-img-placeholder">
-            <span class="owner-initials">RG</span>
-            <div class="owner-name-overlay">
-              <h3>Rahul Goyal</h3>
-              <p>Founder &amp; Visionary Leader</p>
+        <!-- Portrait -->
+        <div class="owner-portrait" data-aos="fade-right" data-aos-duration="800">
+          <div class="owner-img-wrap">
+            <div class="owner-img-placeholder">
+              <span class="owner-initials">RG</span>
+              <div class="owner-name-overlay">
+                <h3>Rahul Goyal</h3>
+                <p>Founder &amp; Visionary Leader</p>
+              </div>
+            </div>
+          </div>
+          <div class="owner-gold-ring"></div>
+          <div class="owner-gold-ring2"></div>
+        </div>
+
+        <!-- Bio -->
+        <div data-aos="fade-left" data-aos-duration="800" data-aos-delay="100">
+          <div class="owner-bio-label">
+            <div class="owner-bio-label-line"></div>
+            <span class="owner-bio-label-text">Founder &amp; CEO</span>
+          </div>
+          <h2 class="owner-bio-title">Rahul Goyal</h2>
+          <p class="owner-bio-role">Entrepreneur · Innovator · Brand Builder</p>
+
+          <p class="owner-bio-text">
+            Rahul Goyal's entrepreneurial journey is a testament to vision, resilience, and relentless ambition.
+            Beginning his path at the age of just 18, he dove headfirst into the world of business — a bold decision
+            that would eventually shape an entire corporate ecosystem.
+          </p>
+          <p class="owner-bio-text">
+            With over 17 years of hands-on experience across diverse industries, Rahul has built, scaled, and led
+            businesses that span jewelry, astrology, information technology, and commercial services. His leadership
+            style is defined by a rare blend of traditional Indian business acumen and forward-thinking modern strategy.
+          </p>
+          <p class="owner-bio-text">
+            As the founder of GR Silver Designs and RashiYog, Rahul has demonstrated an ability to identify niche
+            opportunities and transform them into recognized national and international brands. His global outlook and
+            entrepreneurial spirit continue to drive Ananya Lifestyle's expansion into new verticals.
+          </p>
+
+          <div class="owner-highlights">
+            <div class="owner-highlight">
+              <div class="owner-highlight-icon">🚀</div>
+              <div>
+                <div class="owner-highlight-text">Started at Age 18</div>
+                <div class="owner-highlight-sub">Early entrepreneurial drive</div>
+              </div>
+            </div>
+            <div class="owner-highlight">
+              <div class="owner-highlight-icon">⏳</div>
+              <div>
+                <div class="owner-highlight-text">17+ Years Experience</div>
+                <div class="owner-highlight-sub">Across multiple industries</div>
+              </div>
+            </div>
+            <div class="owner-highlight">
+              <div class="owner-highlight-icon">🌐</div>
+              <div>
+                <div class="owner-highlight-text">Global Brand Builder</div>
+                <div class="owner-highlight-sub">International market presence</div>
+              </div>
+            </div>
+            <div class="owner-highlight">
+              <div class="owner-highlight-icon">💡</div>
+              <div>
+                <div class="owner-highlight-text">Innovation Leadership</div>
+                <div class="owner-highlight-sub">5 thriving business verticals</div>
+              </div>
             </div>
           </div>
         </div>
-        <div class="owner-gold-ring"></div>
-        <div class="owner-gold-ring2"></div>
+
       </div>
-
-      <!-- Bio -->
-      <div data-aos="fade-left" data-aos-duration="800" data-aos-delay="100">
-        <div class="owner-bio-label">
-          <div class="owner-bio-label-line"></div>
-          <span class="owner-bio-label-text">Founder &amp; CEO</span>
-        </div>
-        <h2 class="owner-bio-title">Rahul Goyal</h2>
-        <p class="owner-bio-role">Entrepreneur · Innovator · Brand Builder</p>
-
-        <p class="owner-bio-text">
-          Rahul Goyal's entrepreneurial journey is a testament to vision, resilience, and relentless ambition. Beginning his path at the age of just 18, he dove headfirst into the world of business — a bold decision that would eventually shape an entire corporate ecosystem.
-        </p>
-        <p class="owner-bio-text">
-          With over 17 years of hands-on experience across diverse industries, Rahul has built, scaled, and led businesses that span jewelry, astrology, information technology, and commercial services. His leadership style is defined by a rare blend of traditional Indian business acumen and forward-thinking modern strategy.
-        </p>
-        <p class="owner-bio-text">
-          As the founder of GR Silver Designs and RashiYog, Rahul has demonstrated an ability to identify niche opportunities and transform them into recognized national and international brands. His global outlook and entrepreneurial spirit continue to drive Ananya Lifestyle's expansion into new verticals.
-        </p>
-
-        <div class="owner-highlights">
-          <div class="owner-highlight">
-            <div class="owner-highlight-icon">🚀</div>
-            <div>
-              <div class="owner-highlight-text">Started at Age 18</div>
-              <div class="owner-highlight-sub">Early entrepreneurial drive</div>
-            </div>
-          </div>
-          <div class="owner-highlight">
-            <div class="owner-highlight-icon">⏳</div>
-            <div>
-              <div class="owner-highlight-text">17+ Years Experience</div>
-              <div class="owner-highlight-sub">Across multiple industries</div>
-            </div>
-          </div>
-          <div class="owner-highlight">
-            <div class="owner-highlight-icon">🌐</div>
-            <div>
-              <div class="owner-highlight-text">Global Brand Builder</div>
-              <div class="owner-highlight-sub">International market presence</div>
-            </div>
-          </div>
-          <div class="owner-highlight">
-            <div class="owner-highlight-icon">💡</div>
-            <div>
-              <div class="owner-highlight-text">Innovation Leadership</div>
-              <div class="owner-highlight-sub">5 thriving business verticals</div>
-            </div>
-          </div>
-        </div>
-      </div>
-
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- =============================================
+  <!-- =============================================
      STATS SECTION
 ============================================= -->
-<section id="stats" aria-label="Achievements">
-  <div class="container">
-    <div class="stats-grid">
-      <div class="stat-item" data-aos="fade-up" data-aos-delay="0">
-        <div class="stat-number"><span class="counter" data-target="17">0</span><span class="stat-suffix">+</span></div>
-        <div class="stat-label">Years of Excellence</div>
-        <div class="stat-desc">Since 2007, building lasting businesses</div>
-      </div>
-      <div class="stat-item" data-aos="fade-up" data-aos-delay="100">
-        <div class="stat-number"><span class="counter" data-target="5">0</span></div>
-        <div class="stat-label">Business Verticals</div>
-        <div class="stat-desc">Diversified across key growth sectors</div>
-      </div>
-      <div class="stat-item" data-aos="fade-up" data-aos-delay="200">
-        <div class="stat-number"><span class="counter" data-target="10000">0</span><span class="stat-suffix">+</span></div>
-        <div class="stat-label">Happy Clients</div>
-        <div class="stat-desc">Trusted by thousands across India</div>
-      </div>
-      <div class="stat-item" data-aos="fade-up" data-aos-delay="300">
-        <div class="stat-number"><span class="counter" data-target="15">0</span><span class="stat-suffix">+</span></div>
-        <div class="stat-label">Global Markets</div>
-        <div class="stat-desc">Export reach across continents</div>
+  <section id="stats" aria-label="Achievements">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-item" data-aos="fade-up" data-aos-delay="0">
+          <div class="stat-number"><span class="counter" data-target="17">0</span><span class="stat-suffix">+</span>
+          </div>
+          <div class="stat-label">Years of Excellence</div>
+          <div class="stat-desc">Since 2007, building lasting businesses</div>
+        </div>
+        <div class="stat-item" data-aos="fade-up" data-aos-delay="100">
+          <div class="stat-number"><span class="counter" data-target="5">0</span></div>
+          <div class="stat-label">Business Verticals</div>
+          <div class="stat-desc">Diversified across key growth sectors</div>
+        </div>
+        <div class="stat-item" data-aos="fade-up" data-aos-delay="200">
+          <div class="stat-number"><span class="counter" data-target="10000">0</span><span class="stat-suffix">+</span>
+          </div>
+          <div class="stat-label">Happy Clients</div>
+          <div class="stat-desc">Trusted by thousands across India</div>
+        </div>
+        <div class="stat-item" data-aos="fade-up" data-aos-delay="300">
+          <div class="stat-number"><span class="counter" data-target="15">0</span><span class="stat-suffix">+</span>
+          </div>
+          <div class="stat-label">Global Markets</div>
+          <div class="stat-desc">Export reach across continents</div>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- =============================================
+  <!-- =============================================
      VISION SECTION
 ============================================= -->
-<section id="vision" aria-label="Vision and Future">
-  <div class="container">
-    <div class="vision-grid">
+  <section id="vision" aria-label="Vision and Future">
+    <div class="container">
+      <div class="vision-grid">
 
-      <!-- Timeline -->
-      <div data-aos="fade-right" data-aos-duration="800">
-        <p class="section-label">Our Roadmap</p>
-        <h2 class="section-title">The Journey <span>Forward</span></h2>
-        <div class="gold-line"></div>
+        <!-- Timeline -->
+        <div data-aos="fade-right" data-aos-duration="800">
+          <p class="section-label">Our Roadmap</p>
+          <h2 class="section-title">The Journey <span>Forward</span></h2>
+          <div class="gold-line"></div>
 
-        <div class="vision-timeline">
+          <div class="vision-timeline">
 
-          <div class="vision-item active">
-            <div class="vision-dot-wrap">
-              <div class="vision-dot">✓</div>
-              <div class="vision-line"></div>
+            <div class="vision-item active">
+              <div class="vision-dot-wrap">
+                <div class="vision-dot">✓</div>
+                <div class="vision-line"></div>
+              </div>
+              <div class="vision-body">
+                <div class="vision-year">2007 — Present</div>
+                <div class="vision-title">Jewelry &amp; Astrology Foundations</div>
+                <div class="vision-text">Established GR Silver Designs and RashiYog as recognized brands with national
+                  and global footprints.</div>
+              </div>
             </div>
-            <div class="vision-body">
-              <div class="vision-year">2007 — Present</div>
-              <div class="vision-title">Jewelry &amp; Astrology Foundations</div>
-              <div class="vision-text">Established GR Silver Designs and RashiYog as recognized brands with national and global footprints.</div>
+
+            <div class="vision-item active">
+              <div class="vision-dot-wrap">
+                <div class="vision-dot">✓</div>
+                <div class="vision-line"></div>
+              </div>
+              <div class="vision-body">
+                <div class="vision-year">2020 — Present</div>
+                <div class="vision-title">IT &amp; Digital Expansion</div>
+                <div class="vision-text">Launched technology and B2B/B2C service divisions, embracing digital
+                  infrastructure and modern commerce solutions.</div>
+              </div>
             </div>
+
+            <div class="vision-item upcoming">
+              <div class="vision-dot-wrap">
+                <div class="vision-dot" style="font-size:0.7rem;">🌿</div>
+                <div class="vision-line"></div>
+              </div>
+              <div class="vision-body">
+                <div class="vision-year" style="color:#74C69D;">2025 — 2026</div>
+                <div class="vision-title">Ayurveda &amp; Wellness Launch</div>
+                <div class="vision-text">Entering the booming wellness market with a premium Ayurvedic brand. Products,
+                  consulting, and holistic solutions in pipeline.</div>
+              </div>
+            </div>
+
+            <div class="vision-item upcoming">
+              <div class="vision-dot-wrap">
+                <div class="vision-dot" style="font-size:0.7rem;">🌐</div>
+              </div>
+              <div class="vision-body" style="padding-bottom:0;">
+                <div class="vision-year" style="color:#74C69D;">2026 &amp; Beyond</div>
+                <div class="vision-title">Global Conglomerate Vision</div>
+                <div class="vision-text">Ananya Lifestyle is positioned to become a fully listed, globally respected
+                  Indian corporate conglomerate by 2030.</div>
+              </div>
+            </div>
+
           </div>
+        </div>
 
-          <div class="vision-item active">
-            <div class="vision-dot-wrap">
-              <div class="vision-dot">✓</div>
-              <div class="vision-line"></div>
-            </div>
-            <div class="vision-body">
-              <div class="vision-year">2020 — Present</div>
-              <div class="vision-title">IT &amp; Digital Expansion</div>
-              <div class="vision-text">Launched technology and B2B/B2C service divisions, embracing digital infrastructure and modern commerce solutions.</div>
-            </div>
-          </div>
+        <!-- Right content -->
+        <div class="vision-right" data-aos="fade-left" data-aos-duration="800" data-aos-delay="100">
+          <p class="section-label">Our Philosophy</p>
+          <h2 class="section-title">Rooted in <span>India,</span><br />Built for the World</h2>
+          <div class="gold-line"></div>
 
-          <div class="vision-item upcoming">
-            <div class="vision-dot-wrap">
-              <div class="vision-dot" style="font-size:0.7rem;">🌿</div>
-              <div class="vision-line"></div>
-            </div>
-            <div class="vision-body">
-              <div class="vision-year" style="color:#74C69D;">2025 — 2026</div>
-              <div class="vision-title">Ayurveda &amp; Wellness Launch</div>
-              <div class="vision-text">Entering the booming wellness market with a premium Ayurvedic brand. Products, consulting, and holistic solutions in pipeline.</div>
-            </div>
-          </div>
+          <p class="section-subtitle" style="max-width:100%;margin-bottom:24px;">
+            Ananya Lifestyle is driven by a singular belief — that Indian entrepreneurship, culture, and wisdom hold the
+            power to create world-class, globally competitive enterprises.
+          </p>
 
-          <div class="vision-item upcoming">
-            <div class="vision-dot-wrap">
-              <div class="vision-dot" style="font-size:0.7rem;">🌐</div>
+          <p style="font-size:0.87rem;color:var(--text-muted);line-height:1.9;margin-bottom:32px;">
+            Every vertical we enter, every brand we build, and every market we serve is guided by our core values:
+            integrity, innovation, and impact. We are not just building businesses — we are crafting a lasting legacy
+            for India's entrepreneurial future.
+          </p>
+
+          <!-- Ayurveda card -->
+          <div class="vision-ayurveda-card">
+            <div class="vision-ayurveda-title">🌿 Ayurveda Expansion</div>
+            <div class="vision-ayurveda-text">
+              Our upcoming Ayurveda division will offer premium, authentically formulated herbal products and holistic
+              wellness consulting — tapping into a ₹30,000 crore+ Indian market and a rapidly growing global wellness
+              economy.
             </div>
-            <div class="vision-body" style="padding-bottom:0;">
-              <div class="vision-year" style="color:#74C69D;">2026 &amp; Beyond</div>
-              <div class="vision-title">Global Conglomerate Vision</div>
-              <div class="vision-text">Ananya Lifestyle is positioned to become a fully listed, globally respected Indian corporate conglomerate by 2030.</div>
-            </div>
+            <div class="vision-ayurveda-badge">Launching Soon</div>
           </div>
 
         </div>
-      </div>
-
-      <!-- Right content -->
-      <div class="vision-right" data-aos="fade-left" data-aos-duration="800" data-aos-delay="100">
-        <p class="section-label">Our Philosophy</p>
-        <h2 class="section-title">Rooted in <span>India,</span><br />Built for the World</h2>
-        <div class="gold-line"></div>
-
-        <p class="section-subtitle" style="max-width:100%;margin-bottom:24px;">
-          Ananya Lifestyle is driven by a singular belief — that Indian entrepreneurship, culture, and wisdom hold the power to create world-class, globally competitive enterprises.
-        </p>
-
-        <p style="font-size:0.87rem;color:var(--text-muted);line-height:1.9;margin-bottom:32px;">
-          Every vertical we enter, every brand we build, and every market we serve is guided by our core values: integrity, innovation, and impact. We are not just building businesses — we are crafting a lasting legacy for India's entrepreneurial future.
-        </p>
-
-        <!-- Ayurveda card -->
-        <div class="vision-ayurveda-card">
-          <div class="vision-ayurveda-title">🌿 Ayurveda Expansion</div>
-          <div class="vision-ayurveda-text">
-            Our upcoming Ayurveda division will offer premium, authentically formulated herbal products and holistic wellness consulting — tapping into a ₹30,000 crore+ Indian market and a rapidly growing global wellness economy.
-          </div>
-          <div class="vision-ayurveda-badge">Launching Soon</div>
-        </div>
 
       </div>
-
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- =============================================
+  <!-- =============================================
      CONTACT SECTION
 ============================================= -->
-<section id="contact" aria-label="Contact Us">
-  <div class="container">
-    <div class="contact-grid">
+  <section id="contact" aria-label="Contact Us">
+    <div class="container">
+      <div class="contact-grid">
 
-      <!-- Info -->
-      <div data-aos="fade-right" data-aos-duration="800">
-        <p class="section-label">Get In Touch</p>
-        <h2 class="contact-info-title">Let's Build <span style="color:var(--gold);">Something Great</span> Together</h2>
-        <p class="contact-info-text">
-          Whether you're looking to collaborate, invest, partner, or explore our services — we'd love to hear from you. Reach out and let's start a conversation.
-        </p>
+        <!-- Info -->
+        <div data-aos="fade-right" data-aos-duration="800">
+          <p class="section-label">Get In Touch</p>
+          <h2 class="contact-info-title">Let's Build <span style="color:var(--gold);">Something Great</span> Together
+          </h2>
+          <p class="contact-info-text">
+            Whether you're looking to collaborate, invest, partner, or explore our services — we'd love to hear from
+            you. Reach out and let's start a conversation.
+          </p>
 
-        <div class="contact-links">
-          <div class="contact-link-item">
-            <div class="contact-link-icon">📧</div>
-            <div>
-              <div class="contact-link-label">Email Address</div>
-              <div class="contact-link-value">info@ananyalifestyle.com</div>
+          <div class="contact-links">
+            <div class="contact-link-item">
+              <div class="contact-link-icon">📧</div>
+              <div>
+                <div class="contact-link-label">Email Address</div>
+                <div class="contact-link-value">info@ananyalifestyle.com</div>
+              </div>
             </div>
-          </div>
-          <div class="contact-link-item">
-            <div class="contact-link-icon">📱</div>
-            <div>
-              <div class="contact-link-label">Mobile Number</div>
-              <div class="contact-link-value">+91 98765 43210</div>
+            <div class="contact-link-item">
+              <div class="contact-link-icon">📱</div>
+              <div>
+                <div class="contact-link-label">Mobile Number</div>
+                <div class="contact-link-value">+91 98765 43210</div>
+              </div>
             </div>
-          </div>
-          <div class="contact-link-item">
-            <div class="contact-link-icon">📍</div>
-            <div>
-              <div class="contact-link-label">Headquarters</div>
-              <div class="contact-link-value">123, Luxury Business Hub, Jaipur, Rajasthan, India</div>
+            <div class="contact-link-item">
+              <div class="contact-link-icon">📍</div>
+              <div>
+                <div class="contact-link-label">Headquarters</div>
+                <div class="contact-link-value">123, Luxury Business Hub, Jaipur, Rajasthan, India</div>
+              </div>
             </div>
-          </div>
-          <div class="contact-link-item">
-            <div class="contact-link-icon">🌐</div>
-            <div>
-              <div class="contact-link-label">Global Presence</div>
-              <div class="contact-link-value">Operations across India & Global Exports</div>
+            <div class="contact-link-item">
+              <div class="contact-link-icon">🌐</div>
+              <div>
+                <div class="contact-link-label">Global Presence</div>
+                <div class="contact-link-value">Operations across India & Global Exports</div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
 
-      <!-- Form -->
-      <div data-aos="fade-left" data-aos-duration="800" data-aos-delay="100">
-        <div class="contact-form">
-          <h3 class="form-title">Initiate a Partnership Inquiry</h3>
-          <form onsubmit="handleFormSubmit(event)">
-            <div class="form-row">
-              <div class="form-group">
-                <label for="fname">First Name</label>
-                <input type="text" id="fname" name="fname" placeholder="Your first name" required />
+        <!-- Form -->
+        <div data-aos="fade-left" data-aos-duration="800" data-aos-delay="100">
+          <div class="contact-form">
+            <h3 class="form-title">Initiate a Partnership Inquiry</h3>
+            <form onsubmit="handleFormSubmit(event)">
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="fname">First Name</label>
+                  <input type="text" id="fname" name="fname" placeholder="Your first name" required />
+                </div>
+                <div class="form-group">
+                  <label for="lname">Last Name</label>
+                  <input type="text" id="lname" name="lname" placeholder="Your last name" />
+                </div>
               </div>
               <div class="form-group">
-                <label for="lname">Last Name</label>
-                <input type="text" id="lname" name="lname" placeholder="Your last name" />
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" placeholder="your@email.com" required />
               </div>
-            </div>
-            <div class="form-group">
-              <label for="email">Email Address</label>
-              <input type="email" id="email" name="email" placeholder="your@email.com" required />
-            </div>
-            <div class="form-group">
-              <label for="phone">Phone Number</label>
-              <input type="tel" id="phone" name="phone" placeholder="+91 XXXXX XXXXX" />
-            </div>
-            <div class="form-group">
-              <label for="interest">Area of Interest</label>
-              <select id="interest" name="interest">
-                <option value="">Select a business vertical...</option>
-                <option value="jewelry">💎 Jewelry Manufacturing (GR Silver Designs)</option>
-                <option value="astrology">🔮 Astrology Consulting (RashiYog)</option>
-                <option value="it">💻 IT Services</option>
-                <option value="b2b">🤝 B2B / B2C Services</option>
-                <option value="ayurveda">🌿 Ayurveda (Upcoming)</option>
-                <option value="partnership">🌐 Partnership / Investment</option>
-                <option value="general">📋 General Inquiry</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <label for="message">Your Message</label>
-              <textarea id="message" name="message" placeholder="Tell us about your inquiry, project, or how we can help you..."></textarea>
-            </div>
-            <button type="submit" class="btn btn-gold form-submit">
-              Send Message ✦
-            </button>
-          </form>
+              <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" placeholder="+91 XXXXX XXXXX" />
+              </div>
+              <div class="form-group">
+                <label for="interest">Area of Interest</label>
+                <select id="interest" name="interest">
+                  <option value="">Select a business vertical...</option>
+                  <option value="jewelry">💎 Jewelry Manufacturing (GR Silver Designs)</option>
+                  <option value="astrology">🔮 Astrology Consulting (RashiYog)</option>
+                  <option value="it">💻 IT Services</option>
+                  <option value="b2b">🤝 B2B / B2C Services</option>
+                  <option value="ayurveda">🌿 Ayurveda (Upcoming)</option>
+                  <option value="partnership">🌐 Partnership / Investment</option>
+                  <option value="general">📋 General Inquiry</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="message">Your Message</label>
+                <textarea id="message" name="message"
+                  placeholder="Tell us about your inquiry, project, or how we can help you..."></textarea>
+              </div>
+              <button type="submit" class="btn btn-gold form-submit">
+                Send Message ✦
+              </button>
+            </form>
+          </div>
         </div>
-      </div>
 
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- =============================================
+  <!-- =============================================
      FOOTER
 ============================================= -->
-<footer>
-  <div class="container">
-    <div class="footer-grid">
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
 
-      <div>
-        <div class="footer-brand-name">Ananya Lifestyle</div>
-        <div class="footer-brand-sub">India Private Limited</div>
-        <p class="footer-desc">
-          A diversified Indian corporate conglomerate committed to building premium, purpose-driven brands across Jewelry, Astrology, Technology, Commerce, and Wellness.
-        </p>
+        <div>
+          <div class="footer-brand-name">Ananya Lifestyle</div>
+          <div class="footer-brand-sub">India Private Limited</div>
+          <p class="footer-desc">
+            A diversified Indian corporate conglomerate committed to building premium, purpose-driven brands across
+            Jewelry, Astrology, Technology, Commerce, and Wellness.
+          </p>
+        </div>
+
+        <div>
+          <div class="footer-col-title">Our Brands</div>
+          <ul class="footer-links">
+            <li><a href="https://grsilverdesigns.com" target="_blank" rel="noopener">GR Silver Designs</a></li>
+            <li><a href="https://rashiyog.com" target="_blank" rel="noopener">RashiYog</a></li>
+            <li><a href="#services">IT Services</a></li>
+            <!-- <li><a href="#services">B2B &amp; B2C</a></li> -->
+            <li><a href="#vision">Ayurveda (Soon)</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer-col-title">Company</div>
+          <ul class="footer-links">
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#owner">Leadership</a></li>
+            <li><a href="#vision">Vision 2030</a></li>
+            <li><a href="#stats">Achievements</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer-col-title">Connect</div>
+          <ul class="footer-links">
+            <li><a href="https://grsilverdesigns.com" target="_blank" rel="noopener">💎 Jewelry Store</a></li>
+            <li><a href="https://rashiyog.com" target="_blank" rel="noopener">🔮 Astrology Portal</a></li>
+            <li><a href="#contact">🤝 Partner with Us</a></li>
+            <li><a href="#contact">📧 Write to Us</a></li>
+          </ul>
+        </div>
+
       </div>
 
-      <div>
-        <div class="footer-col-title">Our Brands</div>
-        <ul class="footer-links">
-          <li><a href="https://grsilverdesigns.com" target="_blank" rel="noopener">GR Silver Designs</a></li>
-          <li><a href="https://rashiyog.com" target="_blank" rel="noopener">RashiYog</a></li>
-          <li><a href="#services">IT Services</a></li>
-          <!-- <li><a href="#services">B2B &amp; B2C</a></li> -->
-          <li><a href="#vision">Ayurveda (Soon)</a></li>
-        </ul>
-      </div>
+      <div class="footer-divider"></div>
 
-      <div>
-        <div class="footer-col-title">Company</div>
-        <ul class="footer-links">
-          <li><a href="#about">About Us</a></li>
-          <li><a href="#owner">Leadership</a></li>
-          <li><a href="#vision">Vision 2030</a></li>
-          <li><a href="#stats">Achievements</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
+      <div class="footer-bottom">
+        <div class="footer-copy">
+          © 2026 <span>Ananya Lifestyle India Pvt. Ltd.</span> All rights reserved. Founded by Rahul Goyal.
+        </div>
+        <div class="footer-legal">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Disclaimer</a>
+        </div>
       </div>
-
-      <div>
-        <div class="footer-col-title">Connect</div>
-        <ul class="footer-links">
-          <li><a href="https://grsilverdesigns.com" target="_blank" rel="noopener">💎 Jewelry Store</a></li>
-          <li><a href="https://rashiyog.com" target="_blank" rel="noopener">🔮 Astrology Portal</a></li>
-          <li><a href="#contact">🤝 Partner with Us</a></li>
-          <li><a href="#contact">📧 Write to Us</a></li>
-        </ul>
-      </div>
-
     </div>
+  </footer>
 
-    <div class="footer-divider"></div>
-
-    <div class="footer-bottom">
-      <div class="footer-copy">
-        © 2024 <span>Ananya Lifestyle India Pvt. Ltd.</span> All rights reserved. Founded by Rahul Goyal.
-      </div>
-      <div class="footer-legal">
-        <a href="#">Privacy Policy</a>
-        <a href="#">Terms of Service</a>
-        <a href="#">Disclaimer</a>
-      </div>
-    </div>
-  </div>
-</footer>
-
-<!-- =============================================
+  <!-- =============================================
      AOS JS
 ============================================= -->
-<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
 
-<script>
-/* =============================================
-   INIT AOS
-============================================= */
-AOS.init({
-  duration: 700,
-  easing: 'ease-out-quad',
-  once: true,
-  offset: 60,
-});
+  <script>
+    /* =============================================
+       INIT AOS
+    ============================================= */
+    AOS.init({
+      duration: 700,
+      easing: 'ease-out-quad',
+      once: true,
+      offset: 60,
+    });
 
-/* =============================================
-   NAVBAR SCROLL EFFECT
-============================================= */
-const navbar = document.getElementById('navbar');
-window.addEventListener('scroll', () => {
-  navbar.classList.toggle('scrolled', window.scrollY > 60);
-});
+    /* =============================================
+       NAVBAR SCROLL EFFECT
+    ============================================= */
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('scrolled', window.scrollY > 60);
+    });
 
-/* =============================================
-   MOBILE MENU
-============================================= */
-const hamburger = document.getElementById('hamburger');
-const mobileMenu = document.getElementById('mobileMenu');
-const mobileClose = document.getElementById('mobileClose');
+    /* =============================================
+       MOBILE MENU
+    ============================================= */
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const mobileClose = document.getElementById('mobileClose');
 
-hamburger.addEventListener('click', () => { mobileMenu.classList.add('open'); });
-mobileClose.addEventListener('click', closeMobileMenu);
-function closeMobileMenu() { mobileMenu.classList.remove('open'); }
+    hamburger.addEventListener('click', () => { mobileMenu.classList.add('open'); });
+    mobileClose.addEventListener('click', closeMobileMenu);
+    function closeMobileMenu() { mobileMenu.classList.remove('open'); }
 
-/* =============================================
-   PARTICLE CANVAS — HERO BACKGROUND
-============================================= */
-(function() {
-  const canvas = document.getElementById('hero-canvas');
-  const ctx = canvas.getContext('2d');
-  let W, H, particles = [], animFrame;
+    /* =============================================
+       PARTICLE CANVAS — HERO BACKGROUND
+    ============================================= */
+    (function () {
+      const canvas = document.getElementById('hero-canvas');
+      const ctx = canvas.getContext('2d');
+      let W, H, particles = [], animFrame;
 
-  function resize() {
-    W = canvas.width = canvas.offsetWidth;
-    H = canvas.height = canvas.offsetHeight;
-  }
+      function resize() {
+        W = canvas.width = canvas.offsetWidth;
+        H = canvas.height = canvas.offsetHeight;
+      }
 
-  function Particle() {
-    this.reset();
-  }
+      function Particle() {
+        this.reset();
+      }
 
-  Particle.prototype.reset = function() {
-    this.x = Math.random() * W;
-    this.y = Math.random() * H;
-    this.r = Math.random() * 1.2 + 0.3;
-    this.alpha = Math.random() * 0.6 + 0.1;
-    this.vx = (Math.random() - 0.5) * 0.3;
-    this.vy = (Math.random() - 0.5) * 0.3 - 0.1;
-    this.life = 0;
-    this.maxLife = Math.random() * 400 + 200;
-    const chance = Math.random();
-    if (chance < 0.5) {
-      this.color = `rgba(201,168,76,${this.alpha})`;
-    } else if (chance < 0.75) {
-      this.color = `rgba(255,255,255,${this.alpha * 0.4})`;
-    } else {
-      this.color = `rgba(180,150,220,${this.alpha * 0.3})`;
-    }
-  };
+      Particle.prototype.reset = function () {
+        this.x = Math.random() * W;
+        this.y = Math.random() * H;
+        this.r = Math.random() * 1.2 + 0.3;
+        this.alpha = Math.random() * 0.6 + 0.1;
+        this.vx = (Math.random() - 0.5) * 0.3;
+        this.vy = (Math.random() - 0.5) * 0.3 - 0.1;
+        this.life = 0;
+        this.maxLife = Math.random() * 400 + 200;
+        const chance = Math.random();
+        if (chance < 0.5) {
+          this.color = `rgba(201,168,76,${this.alpha})`;
+        } else if (chance < 0.75) {
+          this.color = `rgba(255,255,255,${this.alpha * 0.4})`;
+        } else {
+          this.color = `rgba(180,150,220,${this.alpha * 0.3})`;
+        }
+      };
 
-  Particle.prototype.update = function() {
-    this.x += this.vx;
-    this.y += this.vy;
-    this.life++;
-    if (this.life > this.maxLife || this.x < 0 || this.x > W || this.y < 0 || this.y > H) {
-      this.reset();
-      this.y = H + 5;
-    }
-  };
+      Particle.prototype.update = function () {
+        this.x += this.vx;
+        this.y += this.vy;
+        this.life++;
+        if (this.life > this.maxLife || this.x < 0 || this.x > W || this.y < 0 || this.y > H) {
+          this.reset();
+          this.y = H + 5;
+        }
+      };
 
-  Particle.prototype.draw = function() {
-    const fade = Math.min(1, Math.min(this.life / 50, (this.maxLife - this.life) / 50));
-    ctx.beginPath();
-    ctx.arc(this.x, this.y, this.r, 0, Math.PI * 2);
-    ctx.fillStyle = this.color.replace(/[\d.]+\)$/, (this.alpha * fade) + ')');
-    ctx.fill();
-  };
+      Particle.prototype.draw = function () {
+        const fade = Math.min(1, Math.min(this.life / 50, (this.maxLife - this.life) / 50));
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.r, 0, Math.PI * 2);
+        ctx.fillStyle = this.color.replace(/[\d.]+\)$/, (this.alpha * fade) + ')');
+        ctx.fill();
+      };
 
-  function initParticles() {
-    particles = [];
-    const count = Math.min(160, Math.floor(W * H / 8000));
-    for (let i = 0; i < count; i++) {
-      const p = new Particle();
-      p.life = Math.floor(Math.random() * p.maxLife);
-      particles.push(p);
-    }
-  }
-
-  function drawConnections() {
-    const maxDist = 120;
-    for (let i = 0; i < particles.length; i++) {
-      for (let j = i + 1; j < particles.length; j++) {
-        const dx = particles[i].x - particles[j].x;
-        const dy = particles[i].y - particles[j].y;
-        const dist = Math.sqrt(dx * dx + dy * dy);
-        if (dist < maxDist) {
-          const alpha = (1 - dist / maxDist) * 0.08;
-          ctx.beginPath();
-          ctx.moveTo(particles[i].x, particles[i].y);
-          ctx.lineTo(particles[j].x, particles[j].y);
-          ctx.strokeStyle = `rgba(201,168,76,${alpha})`;
-          ctx.lineWidth = 0.5;
-          ctx.stroke();
+      function initParticles() {
+        particles = [];
+        const count = Math.min(160, Math.floor(W * H / 8000));
+        for (let i = 0; i < count; i++) {
+          const p = new Particle();
+          p.life = Math.floor(Math.random() * p.maxLife);
+          particles.push(p);
         }
       }
-    }
-  }
 
-  function loop() {
-    ctx.clearRect(0, 0, W, H);
-    particles.forEach(p => { p.update(); p.draw(); });
-    drawConnections();
-    animFrame = requestAnimationFrame(loop);
-  }
+      function drawConnections() {
+        const maxDist = 120;
+        for (let i = 0; i < particles.length; i++) {
+          for (let j = i + 1; j < particles.length; j++) {
+            const dx = particles[i].x - particles[j].x;
+            const dy = particles[i].y - particles[j].y;
+            const dist = Math.sqrt(dx * dx + dy * dy);
+            if (dist < maxDist) {
+              const alpha = (1 - dist / maxDist) * 0.08;
+              ctx.beginPath();
+              ctx.moveTo(particles[i].x, particles[i].y);
+              ctx.lineTo(particles[j].x, particles[j].y);
+              ctx.strokeStyle = `rgba(201,168,76,${alpha})`;
+              ctx.lineWidth = 0.5;
+              ctx.stroke();
+            }
+          }
+        }
+      }
 
-  resize();
-  initParticles();
-  loop();
+      function loop() {
+        ctx.clearRect(0, 0, W, H);
+        particles.forEach(p => { p.update(); p.draw(); });
+        drawConnections();
+        animFrame = requestAnimationFrame(loop);
+      }
 
-  window.addEventListener('resize', () => {
-    resize();
-    initParticles();
-  });
-})();
+      resize();
+      initParticles();
+      loop();
 
-/* =============================================
-   ANIMATED COUNTERS
-============================================= */
-function animateCounter(el, target, duration) {
-  let start = 0;
-  const step = target / (duration / 16);
-  const timer = setInterval(() => {
-    start += step;
-    if (start >= target) {
-      el.textContent = target >= 1000 ? target.toLocaleString('en-IN') : target;
-      clearInterval(timer);
-    } else {
-      el.textContent = target >= 1000
-        ? Math.floor(start).toLocaleString('en-IN')
-        : Math.floor(start);
-    }
-  }, 16);
-}
-
-const statsObserver = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      const counters = entry.target.querySelectorAll('.counter');
-      counters.forEach(c => {
-        animateCounter(c, parseInt(c.dataset.target), 1800);
+      window.addEventListener('resize', () => {
+        resize();
+        initParticles();
       });
-      statsObserver.unobserve(entry.target);
+    })();
+
+    /* =============================================
+       ANIMATED COUNTERS
+    ============================================= */
+    function animateCounter(el, target, duration) {
+      let start = 0;
+      const step = target / (duration / 16);
+      const timer = setInterval(() => {
+        start += step;
+        if (start >= target) {
+          el.textContent = target >= 1000 ? target.toLocaleString('en-IN') : target;
+          clearInterval(timer);
+        } else {
+          el.textContent = target >= 1000
+            ? Math.floor(start).toLocaleString('en-IN')
+            : Math.floor(start);
+        }
+      }, 16);
     }
-  });
-}, { threshold: 0.3 });
 
-const statsSection = document.getElementById('stats');
-if (statsSection) statsObserver.observe(statsSection);
+    const statsObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const counters = entry.target.querySelectorAll('.counter');
+          counters.forEach(c => {
+            animateCounter(c, parseInt(c.dataset.target), 1800);
+          });
+          statsObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.3 });
 
-/* =============================================
-   FORM SUBMISSION
-============================================= */
-function handleFormSubmit(e) {
-  e.preventDefault();
-  const btn = e.target.querySelector('.form-submit');
-  const originalText = btn.innerHTML;
-  btn.innerHTML = '✓ Message Sent!';
-  btn.style.background = 'linear-gradient(135deg, #2D6A4F, #1B4332)';
-  btn.style.color = '#74C69D';
-  btn.disabled = true;
-  setTimeout(() => {
-    btn.innerHTML = originalText;
-    btn.style.background = '';
-    btn.style.color = '';
-    btn.disabled = false;
-    e.target.reset();
-  }, 3500);
-}
+    const statsSection = document.getElementById('stats');
+    if (statsSection) statsObserver.observe(statsSection);
 
-/* =============================================
-   SMOOTH SCROLL (fallback for older browsers)
-============================================= */
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener('click', function(e) {
-    const target = document.querySelector(this.getAttribute('href'));
-    if (target) {
+    /* =============================================
+       FORM SUBMISSION
+    ============================================= */
+    function handleFormSubmit(e) {
       e.preventDefault();
-      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      const btn = e.target.querySelector('.form-submit');
+      const originalText = btn.innerHTML;
+      btn.innerHTML = '✓ Message Sent!';
+      btn.style.background = 'linear-gradient(135deg, #2D6A4F, #1B4332)';
+      btn.style.color = '#74C69D';
+      btn.disabled = true;
+      setTimeout(() => {
+        btn.innerHTML = originalText;
+        btn.style.background = '';
+        btn.style.color = '';
+        btn.disabled = false;
+        e.target.reset();
+      }, 3500);
     }
-  });
-});
-</script>
+
+    /* =============================================
+       SMOOTH SCROLL (fallback for older browsers)
+    ============================================= */
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          e.preventDefault();
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+  </script>
 
 </body>
+
 </html>
